@@ -1,20 +1,17 @@
 # Kindle Updater for Kindle Paperwhite 4 (10th gen)
-# v2
+# v3
  
-from urllib.request import urlopen # Python 3
+import webbrowser 
+import re
+from urllib.request import urlopen 
 from bs4 import BeautifulSoup
-import re # regex
-from distutils.version import LooseVersion, StrictVersion # porownanie wersji
+from distutils.version import LooseVersion, StrictVersion 
 from colorama import init
 from termcolor import colored
-# import ctypes 
 from win10toast import ToastNotifier
-# import folium
-# from tkinter import *
-import webbrowser
 
-init() # use Colorama to make Termcolor work on Windows
-toaster = ToastNotifier() # Windows 10 toast notification
+init()
+toaster = ToastNotifier() 
 
 my_version_con = '5.10.1.3'
 installation_date = '2018-11-30'
@@ -38,32 +35,27 @@ output_file_name = 'page_scraped.txt'
 with open(output_file_name) as output_file:  
     read_file = output_file.read() 
     
-current_version = re.search('Software Update( [0-9,.]+)', read_file) # regex pattern search in file
+current_version = re.search('Software Update( [0-9,.]+)', read_file) 
 
-current_version = current_version.group(1) # regex found match
+current_version = current_version.group(1) 
 
-current_version = current_version.strip() # remove any unnecessary chars
+current_version = current_version.strip() 
 
 update_file_url = re.search('(https:\/\/s3\.amazonaws\.com\/(.*)bin)', read_file) 
 
 update_file_url = update_file_url.group(1)
 
 if LooseVersion(my_version) > LooseVersion(current_version):
-    toaster.show_toast("Kindle Updater", "Zainstalowana jest aktualna wersja.", icon_path="icon_ok.ico", duration=5)
-    print (colored("zainstalowana jest nowsza wersja", 'green'))
-    print ("my version: ", my_version)
-    print ("current version: ", current_version)
+    print (colored("Newer version installed. No updates available.", 'green'))
+    toaster.show_toast("Kindle Updater", "Your version is up to date.", icon_path="icon_ok.ico")
 elif LooseVersion(my_version) == LooseVersion(current_version):
-    toaster.show_toast("Kindle Updater", "Zainstalowana jest aktualna wersja.", icon_path="icon_ok.ico", duration=5)
-    print (colored("zainstalowana jest najnowsza wersja", 'green'))
-    print ("my version: ", my_version)
-    print ("current version: ", current_version)
+    print (colored("Newest version installed. No updates available.", 'green'))
+    toaster.show_toast("Kindle Updater", "Your version is up to date.", icon_path="icon_ok.ico")
 else:
-    webbrowser.open(update_file_url)
-    toaster.show_toast("Kindle Updater", "Pobieranie aktualizacji: " + current_version, icon_path="icon_download.ico", duration=5) # Windows 10 toast notification
-    # ctypes.windll.user32.MessageBoxW(0, "dostepna jest aktualizacja", "Kindle Updater", 0)
-    print (colored("dostepna jest aktualizacja", 'red'))
+    print (colored("Update available: " + current_version, 'red')) 
+    print (colored("Downloading update: " + current_version, 'yellow'))
+    toaster.show_toast("Kindle Updater", "Downloading update: " + current_version, icon_path="icon_download.ico")
     print ("my version: ", my_version)
-    print ("current version: ", current_version)
+    webbrowser.open(update_file_url)
     
-input ("press Enter to continue")
+input ("Press Enter to continue...")
