@@ -1,0 +1,2083 @@
+
+<!DOCTYPE doctype html>
+
+<html>
+<head>
+<link href="https://images-na.ssl-images-amazon.com/images/I/61deBWgm5iL._RC|01evdoiemkL.css,01K+Ps1DeEL.css,31bAdTWQ3tL.css,11fF1zzJODL.css,11UGC+GXOPL.css,21LK7jaicML.css,11L58Qpo0GL.css,21EuGTxgpoL.css,01Xl9KigtzL.css,01YhS3Cs-hL.css,21GwE3cR-yL.css,019SHZnt8RL.css,01gv-pABIRL.css,11vZhCgAHbL.css,21Mne54CsmL.css,11WgRxUdJRL.css,01dU8+SPlFL.css,11DGn6WmpTL.css,01SHjPML6tL.css,111-D2qRjiL.css,01QrWuRrZ-L.css,31ElCx173PL.css,114KWZGKCVL.css,01cbS3UK11L.css,21gqsBkZE0L.css,01L8Y-JFEhL.css_.css?AUIClients/AmazonUI#us.not-trident" rel="stylesheet"/>
+<script>
+(function(g,h,O,pa){function k(a){w&&w.tag&&w.tag(q(":","aui",a))}function v(a,b){w&&w.count&&w.count("aui:"+a,0===b?0:b||(w.count("aui:"+a)||0)+1)}function l(a){try{return a.test(navigator.userAgent)}catch(b){return!1}}function x(a,b,c){a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent&&a.attachEvent("on"+b,c)}function q(a,b,c,d){b=b&&c?b+a+c:b||c;return d?q(a,b,d):b}function F(a,b,c){try{Object.defineProperty(a,b,{value:c,writable:!1})}catch(d){a[b]=c}return c}function P(){return setTimeout(Y,
+0)}function qa(a,b){var c=a.length,d=c,f=function(){d--||(Q.push(b),R||(P(),R=!0))};for(f();c--;)Z[a[c]]?f():(z[a[c]]=z[a[c]]||[]).push(f)}function ra(a,b,c,d,f){var e=h.createElement(a?"script":"link");x(e,"error",d);f&&x(e,"load",f);if(a){e.type="text/javascript";e.async=!0;if(a=c)a=-1!==b.indexOf("images/I")||/AUIClients/.test(b);a&&e.setAttribute("crossorigin","anonymous");e.src=b}else e.rel="stylesheet",e.href=b;h.getElementsByTagName("head")[0].appendChild(e)}function aa(a,b){function c(c,d){function f(){ra(b,
+c,h,function(b){!G&&h?(h=!1,v("resource_retry"),f()):(v("resource_error"),a.log("Asset failed to load: "+c,G?"WARN":void 0));b&&b.stopPropagation?b.stopPropagation():g.event&&(g.event.cancelBubble=!0)},d)}if(ba[c])return!1;ba[c]=!0;v("resource_count");var h=!0;return!f()}if(b){var d=0,f=0;c.andConfirm=function(a,b){return c(a,function(){d++;b&&b.apply(this,arguments)})};c.confirm=function(){f++};c.getCsriCounters=function(){return{reqs:d,full:f}}}return c}function sa(a,b,c){for(var d={name:a,guard:function(c){return b.guardFatal(a,
+c)},logError:function(c,d,f){b.logError(c,d,f,a)}},f=[],e=0;e<c.length;e++)H.hasOwnProperty(c[e])&&(f[e]=S.hasOwnProperty(c[e])?S[c[e]](H[c[e]],d):H[c[e]]);return f}function A(a,b,c,d,f){return function(e,h){function n(){var a=null;d?a=h:"function"===typeof h&&(p.start=B(),a=h.apply(g,sa(e,k,l)),p.end=B());if(b){H[e]=a;a=e;for(Z[a]=!0;(z[a]||[]).length;)z[a].shift()();delete z[a]}p.done=!0}var k=f||this;"function"===typeof e&&(h=e,e=void 0);b&&(e=e?e.replace(ca,""):"__NONAME__",T.hasOwnProperty(e)&&
+k.error(q(", reregistered by ",q(" by ",e+" already registered",T[e]),k.attribution),e),T[e]=k.attribution);for(var l=[],m=0;m<a.length;m++)l[m]=a[m].replace(ca,"");var p=da[e||"anon"+ ++ta]={depend:l,registered:B(),namespace:k.namespace};c?n():qa(l,k.guardFatal(e,n));return{decorate:function(a){S[e]=k.guardFatal(e,a)}}}}function ea(a){return function(){var b=Array.prototype.slice.call(arguments);return{execute:A(b,!1,a,!1,this),register:A(b,!0,a,!1,this)}}}function U(a,b){return function(c,d){d||
+(d=c,c=void 0);var f=this.attribution;return function(){y.push(b||{attribution:f,name:c,logLevel:a});var e=d.apply(this,arguments);y.pop();return e}}}function I(a,b){this.load={js:aa(this,!0),css:aa(this)};F(this,"namespace",b);F(this,"attribution",a)}function fa(){h.body?r.trigger("a-bodyBegin"):setTimeout(fa,20)}function C(a,b){if(b){for(var c=a.className.split(" "),d=c.length;d--;)if(c[d]===b)return;a.className+=" "+b}}function ga(a,b){for(var c=a.className.split(" "),d=[],f;void 0!==(f=c.pop());)f&&
+f!==b&&d.push(f);a.className=d.join(" ")}function ha(a){try{return a()}catch(b){return!1}}function J(){if(K){var a=g.innerWidth?{w:g.innerWidth,h:g.innerHeight}:{w:m.clientWidth,h:m.clientHeight};5<Math.abs(a.w-V.w)||50<a.h-V.h?(V=a,L=4,(a=n.mobile||n.tablet?450<a.w&&a.w>a.h:1250<=a.w)?C(m,"a-ws"):ga(m,"a-ws")):0<L&&(L--,ia=setTimeout(J,16))}}function ua(a){(K=void 0===a?!K:!!a)&&J()}function va(){return K}function t(a,b){return"sw:"+(b||"")+":"+a+":"}function ja(a,b,c,d){if(c){b=l(/Chrome/i)&&!l(/Edge/i)&&
+!l(/OPR/i)&&!a.capabilities.isAmazonApp;var f=t(d,"browser"),e=t(d,"prod_mshop"),g=t(d,"beta_mshop");!a.capabilities.isAmazonApp&&c.browser&&b&&(k(f+"supported"),c.browser.action(f,d));!b&&c.browser&&k(f+"unsupported");c.prodMshop&&k(e+"unsupported");c.betaMshop&&k(g+"unsupported")}}"use strict";var M=O.now=O.now||function(){return+new O},B=function(a){return a&&a.now?a.now.bind(a):M}(g.performance);pa=B();var u=g.AmazonUIPageJS||g.P;if(u&&u.when&&u.register)throw Error("A copy of P has already been loaded on this page.");
+var w=g.ue;k();k("aui_build_date:3.18.16-2018-11-20");var Q=[],R=!1,Y;Y=function(){for(var a=P(),b=M();Q.length;)if(Q.shift()(),50<M()-b)return;clearTimeout(a);R=!1};l(/OS 6_[0-9]+ like Mac OS X/i)&&x(g,"scroll",P);var Z={},z={},ba={},G=!1;x(g,"beforeunload",function(){G=!0;setTimeout(function(){G=!1},1E4)});var ca=/^prv:/,T={},H={},S={},da={},ta=0,D,y=[],ka=g.onerror;g.onerror=function(a,b,c,d,f){f&&"object"===typeof f||(f=Error(a,b,c),f.columnNumber=d,f.stack=b||c||d?q(String.fromCharCode(92),f.message,
+"at "+q(":",b,c,d)):void 0);var e=y.pop()||{};f.attribution=q(":",f.attribution||e.attribution,e.name);f.logLevel=e.logLevel;f.attribution&&console&&console.log&&console.log([f.logLevel||"ERROR",a,"thrown by",f.attribution].join(" "));y=[];ka&&(e=[].slice.call(arguments),e[4]=f,ka.apply(g,e))};I.prototype={logError:function(a,b,c,d){b={message:b,logLevel:c||"ERROR",attribution:q(":",this.attribution,d)};if(g.ueLogError)return g.ueLogError(a||b,a?b:null),!0;console&&console.error&&(console.log(b),
+console.error(a));return!1},error:function(a,b,c,d){a=Error(q(":",d,a,c));a.attribution=q(":",this.attribution,b);throw a;},guardError:U(),guardFatal:U("FATAL"),guardCurrent:function(a){var b=y[y.length-1];return b?U(b.logLevel,b).call(this,a):a},log:function(a,b,c){return this.logError(null,a,b,c)},declare:A([],!0,!0,!0),register:A([],!0),execute:A([]),AUI_BUILD_DATE:"3.18.16-2018-11-20",when:ea(),now:ea(!0),trigger:function(a,b,c){var d=M();this.declare(a,{data:b,pageElapsedTime:d-(g.aPageStart||
+NaN),triggerTime:d});c&&c.instrument&&D.when("prv:a-logTrigger").execute(function(b){b(a)})},handleTriggers:function(){this.log("handleTriggers deprecated")},attributeErrors:function(a){return new I(a)},_namespace:function(a,b){return new I(a,b)}};var r=F(g,"AmazonUIPageJS",new I);D=r._namespace("PageJS","AmazonUI");D.declare("prv:p-debug",da);r.declare("p-recorder-events",[]);r.declare("p-recorder-stop",function(){});F(g,"P",r);fa();if(h.addEventListener){var la;h.addEventListener("DOMContentLoaded",
+la=function(){r.trigger("a-domready");h.removeEventListener("DOMContentLoaded",la,!1)},!1)}var m=h.documentElement,W=function(){var a=["O","ms","Moz","Webkit"],b=h.createElement("div");return{testGradients:function(){b.style.cssText="background-image:-webkit-gradient(linear,left top,right bottom,from(#9f9),to(white));background-image:-webkit-linear-gradient(left top,#9f9,white);background-image:linear-gradient(left top,#9f9,white);";return-1<b.style.backgroundImage.indexOf("gradient")},test:function(c){var d=
+c.charAt(0).toUpperCase()+c.substr(1);c=(a.join(d+" ")+d+" "+c).split(" ");for(d=c.length;d--;)if(""===b.style[c[d]])return!0;return!1},testTransform3d:function(){var a=!1;g.matchMedia&&(a=g.matchMedia("(-webkit-transform-3d)").matches);return a}}}(),u=m.className,ma=/(^| )a-mobile( |$)/.test(u),na=/(^| )a-tablet( |$)/.test(u),n={audio:function(){return!!h.createElement("audio").canPlayType},video:function(){return!!h.createElement("video").canPlayType},canvas:function(){return!!h.createElement("canvas").getContext},
+svg:function(){return!!h.createElementNS&&!!h.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect},offline:function(){return navigator.hasOwnProperty&&navigator.hasOwnProperty("onLine")&&navigator.onLine},dragDrop:function(){return"draggable"in h.createElement("span")},geolocation:function(){return!!navigator.geolocation},history:function(){return!(!g.history||!g.history.pushState)},webworker:function(){return!!g.Worker},autofocus:function(){return"autofocus"in h.createElement("input")},
+inputPlaceholder:function(){return"placeholder"in h.createElement("input")},textareaPlaceholder:function(){return"placeholder"in h.createElement("textarea")},localStorage:function(){return"localStorage"in g&&null!==g.localStorage},orientation:function(){return"orientation"in g},touch:function(){return"ontouchend"in h},gradients:function(){return W.testGradients()},hires:function(){var a=g.devicePixelRatio&&1.5<=g.devicePixelRatio||g.matchMedia&&g.matchMedia("(min-resolution:144dpi)").matches;v("hiRes"+
+(ma?"Mobile":na?"Tablet":"Desktop"),a?1:0);return a},transform3d:function(){return W.testTransform3d()},touchScrolling:function(){return l(/Windowshop|android.([3-9]|[L-Z])|OS ([5-9]|[1-9][0-9]+)(_[0-9]{1,2})+ like Mac OS X|Chrome|Silk|Firefox|Trident.+?; Touch/i)},ios:function(){return l(/OS [1-9][0-9]*(_[0-9]*)+ like Mac OS X/i)&&!l(/trident|Edge/i)},android:function(){return l(/android.([1-9]|[L-Z])/i)&&!l(/trident|Edge/i)},mobile:function(){return ma},tablet:function(){return na}},p;for(p in n)n.hasOwnProperty(p)&&
+(n[p]=ha(n[p]));for(var X="textShadow textStroke boxShadow borderRadius borderImage opacity transform transition".split(" "),N=0;N<X.length;N++)n[X[N]]=ha(function(){return W.test(X[N])});var K=!0,ia=0,V={w:0,h:0},L=4;J();x(g,"resize",function(){clearTimeout(ia);L=4;J()});var oa={getItem:function(a){try{return g.localStorage.getItem(a)}catch(b){}},setItem:function(a,b){try{return g.localStorage.setItem(a,b)}catch(c){}}};ga(m,"a-no-js");C(m,"a-js");!l(/OS [1-8](_[0-9]*)+ like Mac OS X/i)||g.navigator.standalone||
+l(/safari/i)||C(m,"a-ember");u=[];for(p in n)n.hasOwnProperty(p)&&n[p]&&u.push("a-"+p.replace(/([A-Z])/g,function(a){return"-"+a.toLowerCase()}));C(m,u.join(" "));m.setAttribute("data-aui-build-date","3.18.16-2018-11-20");r.register("p-detect",function(){return{capabilities:n,localStorage:n.localStorage&&oa,toggleResponsiveGrid:ua,responsiveGridEnabled:va}});l(/UCBrowser/i)||n.localStorage&&C(m,oa.getItem("a-font-class"));r.declare("a-event-revised-handling",!1);var E=navigator.serviceWorker;E&&x(E,
+"message",function(a){a&&a.data&&v(a.data.k,a.data.v)});p={reg:{},unreg:{}};p.unreg.browser={action:function(a,b){var c=E.getRegistrations();c&&c.then(function(c){c.forEach(function(c){c.unregister().then(function(){v(a+"success")}).catch(function(c){r.logError(c,"[AUI SW] Failed to "+b+" service worker: ");v(a+"failure")})})})}};(function(a){var b=a.reg,c=a.unreg;E&&E.getRegistrations?(D.when("A","a-util").execute(function(a,b){ja(a,b,c,"unregister")}),x(g,"load",function(){D.when("A","a-util").execute(function(a,
+c){ja(a,c,b,"register")})})):(b&&(b.browser&&k(t("register","browser")+"unsupported"),b.prodMshop&&k(t("register","prod_mshop")+"unsupported"),b.betaMshop&&k(t("register","beta_mshop")+"unsupported")),c&&(c.browser&&k(t("unregister","browser")+"unsupported"),c.prodMshop&&k(t("unregister","prod_mshop")+"unsupported"),c.betaMshop&&k(t("unregister","beta_mshop")+"unsupported")))})(p);r.declare("a-fix-event-off",!1);v("pagejs:pkgExecTime",B()-NaN)})(window,document,Date);
+  (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/61o5HuBKUHL._RC|11IYhapguOL.js,61VQRvc280L.js,21iSNz47xoL.js,012FVc3131L.js,119KAWlHU6L.js,31fv8bqHLoL.js,31ReKJl2X6L.js,51WivJzk7vL.js,11AHlQhPRjL.js,01NATrwbNUL.js,11aNYFFS5hL.js,116tgw9TSaL.js,21auxuI+dRL.js,01PoLXBDXWL.js,61GDyZ5kYqL.js,01mi-J86cyL.js,11BOgvnnntL.js,31SG6rlHlbL.js,01rpauTep4L.js,01iyxuSGj4L.js,01ChXuHDZsL.js_.js?AUIClients/AmazonUI#168183-T1.177619-T1.144375-T1');
+</script>
+<link href="https://images-na.ssl-images-amazon.com/images/I/419ZIIK4ICL.css?AUIClients/CSHelpCoreCSS" rel="stylesheet"/>
+<link href="https://images-na.ssl-images-amazon.com/images/I/31vj8zXVb0L.css?AUIClients/CSHelpV4CSS" rel="stylesheet"/>
+<style type="text/css">
+.cs-help-content .cs-help-note p {
+  padding-left:75px !important;
+  background: url("https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/indexcard_note._CB380582240_.png") no-repeat 10px 15px !important;
+}
+.cs-help-content .cs-help-note p.take_action {
+  padding-left:75px !important;
+  background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/indexcard_takeaction._CB380582270_.png") !important;
+}
+.cs-help-content .cs-help-note div.cs-help-callout-button {
+  margin-left:75px !important;
+}
+</style>
+<title>
+Amazon.com Help: Software Updates for Kindle Paperwhite (10th Generation)
+</title>
+<script>
+  (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/51hBdbYwbOL.js?AUIClients/CSHelpOmnitureJS');
+</script>
+<script language="JavaScript" type="text/javascript">
+   <!--
+var csHelpOmnitureAccountName = 'acsus-prod';
+
+if (typeof csHelpOmniture === 'undefined') { csHelpOmniture = {}; }
+
+
+csHelpOmniture.setupHMDWidget = function() {
+
+   if (window.P && window.P.AUI_BUILD_DATE) {
+
+      P.when("A").register("csHelpOmniture", function() {
+
+         return {
+            storeHMDResults: function(wasHelpful, feedbackKind, freeformText) {
+               s.linkTrackVars = 'events,eVar53,eVar54,eVar56';
+               s.linkTrackEvents = 'event30,event31';
+               s.events   = "event31"; // Assume "yes".
+               s.pageName = "G54HPVAW86CHYHKS";
+
+               if (! wasHelpful) {
+                  s.events = "event30";
+                  s.eVar53 = feedbackKind;
+
+                  // Not for Phase I.  s.eVar56 = freeformText; //TODO:  right var name?
+               }
+
+               s.eVar54 = "0";
+
+               if (s.tl) {
+                  s.tl(/*objectBeingClickedOrTrue=>*/ true,
+                       /*linkType=>Custom Links*/     "o",
+                       /*linkName=>*/                 "Digital HMD Widget");
+               }
+            }
+         }
+      });
+   }
+};
+
+csHelpOmniture.event = function(omnitureObjJson, jQuery) {
+
+    this.setupHMDWidget();
+
+    s.pageName = 'G54HPVAW86CHYHKS';
+    s.channel = 'Kindle';
+    s.eVar46 = s.channel;
+    s.fpCookieDomainPeriods = '2';
+
+
+
+    s.prop14 = 'software updates for kindle paperwhite (10th generation)';
+    // The first H1 entry takes precedence over the encoded title value, if present.
+    var firstH1 = '';
+    // Migrate to Help 4.0, need to compatible with Help 3.0, will delete else branch once Help 4.0 fully launched
+    if (jQuery('.cs-help-content h1:first').length) {
+        if (jQuery('.cs-help-content h1:first img').length) {
+            if ( jQuery('.cs-help-content h1:first img').attr("alt") !== undefined ) {
+                firstH1 = jQuery('.cs-help-content h1:first img').attr("alt").replace(/["'`\r\n]/g, '');
+            }
+        } else {
+            firstH1 = jQuery('.cs-help-content h1:first').text().replace(/["'`\r\n]/g, '');
+        }
+    } else {
+        firstH1 = jQuery('.center-col h1:first').text();
+    }
+
+    if ( firstH1 ) { s.prop14 = firstH1; }
+
+    s.prop15 = 'CS_HELP_GATEWAY_SS_V2_57525:T3'; // Store any useful weblab settings here, uncomment when we need it
+    // Append Help 3.0 / 4.0 flag
+    if (jQuery('.cs-help-content').length) {
+        s.prop15 += '|HELP_VERSION:4.0';
+    } else {
+        s.prop15 += '|HELP_VERSION:3.0';
+    }
+    s.list1 = s.prop15;
+
+    s.prop37 = '0'; // encrypted customer id
+    s.eVar37 = s.prop37;
+
+    s.prop38 = '000-0000000-0000000'; // session id
+    s.eVar38 = s.prop38;
+
+
+    s.prop41 = 'en_US';  // TO-DO: find correct variable name.
+    s.eVar41 = s.prop41;
+    s.eVar44 = s.prop14;
+
+
+    var mobileSubTopicNodes;
+    if (jQuery('div.a-touch .cs-help-content .a-box-group a').length) {
+        mobileSubTopicNodes = jQuery('div.a-touch .cs-help-content .a-box-group a');
+        mobileSubTopicNodes.click(
+        function(e) {
+            var s = s_gi('acsus-prod');
+            s.linkTrackVars = 'prop44';
+
+            var link = jQuery(this);
+            var position = mobileSubTopicNodes.index(jQuery(this)) + 1;
+            s.prop44 = link.text() + ":" + position;
+
+            s.tl(this,'o');
+        }
+        );
+    }
+    var mobileTopicH2Nodes;
+    if (jQuery('a.a-expander-header').length) {
+        mobileTopicH2Nodes = jQuery('a.a-expander-header');
+        mobileTopicH2Nodes.click(
+        function(e) {
+            if ( ! mobileTopicH2Nodes.children('i.a-icon-section-collapse').length ) return;
+            var s = s_gi('acsus-prod');
+            s.linkTrackVars = 'prop45,eVar45';
+            s.linkTrackEvents =' event1,event2,event3,event4,event5,event6,event7,event21';
+            s.events = 'event21';
+
+            var link = jQuery(this);
+            s.prop45 = link.text();
+            s.eVar45 = link.text();
+
+            s.tl(this,'o', link.text());
+        }
+        );
+    }
+    var firstThreeSearchResultNodes;
+    if (jQuery('.results-list').length) {
+        firstThreeSearchResultNodes = jQuery('.results-list').children('li:lt(3)').find('a');
+    } else {
+        firstThreeSearchResultNodes = jQuery('.cs-help-search-results').children('div.cs-help-search-result-row:lt(3)').children('h2').find('a');
+    }
+    firstThreeSearchResultNodes.click(
+        function(e) {
+            var s = s_gi('acsus-prod');
+            s.linkTrackVars = 'prop10,eVar10';
+            s.linkTrackEvents = (omnitureObjJson['page'] >= 1) ? 'event1,event2,event3,event4,event5,event6,event7,event22' : 'event1,event2,event3,event4,event5,event6,event7,event20,event22';
+            s.events = (omnitureObjJson['page'] >= 1) ? 'event22' : 'event20,event22';
+
+            var link = jQuery(this);
+
+            s.prop10 = '';
+            s.eVar10 = '';
+
+            s.tl(this,'o', link.text());
+        }
+    );
+
+    var otherSearchResultNodes;
+    if (jQuery('.results-list').length) {
+        otherSearchResultNodes = jQuery('.results-list').children('li:gt(2)').find('a');
+    } else {
+        otherSearchResultNodes = jQuery('.cs-help-search-results').children('div.cs-help-search-result-row:gt(2)').children('h2').find('a');
+    }
+
+    otherSearchResultNodes.click(
+        function(e) {
+            var s = s_gi('acsus-prod');
+            s.linkTrackVars = 'events';
+            s.linkTrackEvents = 'event1,event2,event3,event4,event5,event6,event7,event22';
+            s.events = 'event22';
+
+            var link = jQuery(this);
+            s.tl(this,'o', link.text());
+        }
+    );
+
+    jQuery("#displayLink a, .csg-hover-box-content a[href*='gp/help/customer/contact-us'], .take-action-sidebar a[href*='gp/help/customer/contact-us']").click(
+        function(e) {
+            var s = s_gi('acsus-prod');
+            s.linkTrackVars = 'events,prop15';
+            s.linkTrackEvents = 'event1,event2,event3,event4,event5,event6,event7';
+            s.events = 'event4'; // Clicked the Contact Us button
+
+            var link = jQuery(this);
+            s.prop15 = 'CS_HELP_GATEWAY_SS_V2_57525:T3';
+            s.list1 = s.prop15;
+
+            s.tl(this,'o', link.text());
+        }
+    );
+
+    var navTopicNodes;
+    if (jQuery('.cs-help-sidebar-module').length) {
+        navTopicNodes = jQuery('.cs-help-sidebar-module.topic-sidebar .nav-topics li a');
+    } else {
+        navTopicNodes = jQuery('#other-areas-content li').add('.nav-level').add('.nav-siblings').add('.nav-children').add('.nav').find('a');
+    }
+    navTopicNodes.click(
+        function(e) {
+            var s = s_gi('acsus-prod');
+            s.linkTrackVars =' events,eVar12,prop11,prop15';
+            s.linkTrackEvents = 'event1,event2,event3,event4,event5,event6,event7';
+            s.events = 'event5'; // Clicked a left-nav link
+
+            var link = jQuery(this);
+
+            s.prop15 = 'CS_HELP_GATEWAY_SS_V2_57525:T3';
+            s.list1 = s.prop15;
+            s.tl(this,'o', link.text());
+        }
+    );
+
+    var takeActionNodes;
+    if (jQuery('.cs-help-sidebar-module').length) {
+          if(jQuery('.cs-help-sidebar-module.take-action-sidebar li a').length) {
+              takeActionNodes = jQuery('.cs-help-sidebar-module.take-action-sidebar li a').not('a-button');
+          } else {
+              takeActionNodes = jQuery('.cs-help-sidebar-module.take-action-sidebar .a-row .a-column a.quick-solution-action');
+          }
+    } else {
+        takeActionNodes = jQuery('.cs-list-jq li a').add('.gray_box div.inner ul.small_list li a').not('.amzn-btn');
+    }
+    takeActionNodes.add("#help-gateway-category-0 .cs-tools a, a[href*='gp/help/customer/forums']");
+    takeActionNodes.click(
+        function(e) {
+            var s = s_gi('acsus-prod');
+            s.linkTrackVars = 'events,eVar17,prop15';
+            s.linkTrackEvents = 'event1,event2,event3,event4,event5,event6,event7';
+            s.events = 'event7'; // Clicked a right hand link
+
+            var link = jQuery(this);
+            s.eVar17 = link.text();
+            s.prop15 = 'CS_HELP_GATEWAY_SS_V2_57525:T3';
+            s.list1 = s.prop15;
+            s.tl(this,'o', link.text());
+        }
+    );
+
+    jQuery('#search-help').add('#search-help-bottom').submit(
+        function () {
+            var input_value = this.help_keywords.value;
+            var s = s_gi('acsus-prod');
+            s.linkTrackVars = 'events,eVar47,prop46';
+            s.linkTrackEvents = 'event1,event2,event3,event4,event5,event6,event7,event27';
+            s.events = "event27";
+            s.eVar47 = input_value;
+            s.prop46 = input_value;
+
+            s.tl(this,'o', input_value);
+
+        }
+    );
+
+    P.when('wcs-help-faceted-update', 'ready').execute('help-facet-omniture', function() {
+        jQuery('.cs-help-search-facets li a').click(
+            function (e) {
+                var s = s_gi('acsus-prod');
+                s.linkTrackVars = 'events,eVar48,eVar49,eVar50';
+                s.linkTrackEvents = 'event1,event2,event3,event4,event5,event6,event7,event28';
+                s.events = 'event28';
+
+                var link = jQuery(this);
+                var facetName = link.closest('fieldset').find('legend').text();
+                var facetValue = link.text();
+                s.eVar48 = '' + '|' + facetName + '|' + facetValue;
+                s.eVar49 = facetName;
+                s.eVar50 = facetValue;
+
+                s.tl(this,'o', link.text());
+            }
+        );
+    });
+
+    var answerBoxLinks = jQuery(".answer-box a").filter(function() {
+                                return jQuery(this).attr('href');
+                            });
+    answerBoxLinks.click(
+        function(e) {
+            var s = s_gi('acsus-prod');
+            s.linkTrackVars = 'events,eVar9,eVar10,prop10,list1';
+            s.linkTrackEvents = 'event1,event2,event3,event4,event5,event6,event7,event13';
+            s.events = 'event13';
+            s.prop10 = '';
+            s.eVar10 = '';
+            s.list1 = 'CS_HELP_GATEWAY_SS_V2_57525:T3';
+
+            var link = jQuery(this);
+            s.tl(this, 'o', link.text());
+        }
+    );
+
+
+
+
+   /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+   var s_code=s.t();
+       if(s_code) { 
+           jQuery("body").append(s_code);
+       }
+
+   //-->
+
+};
+P.when('cs-retail-help-omniture','jQuery', 'ready').execute('cs-retail-help-omniture-events', function(helpOmniture, jQuery) {
+    // TODO when we're done migrating, move the event function inside of here and replace s_gi with helpOmniture
+    window.s_gi = helpOmniture;
+    csHelpOmniture.event(0,
+        jQuery);
+});
+   <!--
+      /* Ensure a separate start and end tag via a meaningless comment. */
+   //-->
+</script>
+<noscript>
+<img alt="" border="0" height="1" src="https://amazoncustomerservice.d2.sc.omtrdc.net/b/ss/acsus-prod/1/H.25.2--NS/0" width="1"/>
+</noscript>
+<!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.20.3. -->
+<link href="https://images-na.ssl-images-amazon.com/images/I/01LUlxh28%2BL.css?AUIClients/CSHelpVideoPlayerCSS" rel="stylesheet"/>
+</head>
+<body>
+<!-- BeginNav --><script type="text/javascript">var nav_t_begin_nav = + new Date();</script><!-- From remote config --><style type="text/css">
+
+.nav-sprite-v1 .nav-sprite, .nav-sprite-v1 .nav-icon {
+  background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/nav-sprite-global_bluebeacon-V3-1x_optimized._CB483188077_.png);
+  background-position: 0 1000px;
+  background-repeat: repeat-x;
+}
+.nav-spinner {
+  background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/javascripts/lib/popover/images/snake._CB192571611_.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.nav-timeline-icon, .nav-access-image, .nav-timeline-prime-icon {
+  background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/timeline_sprite_1x._CB276239408_.png);
+  background-repeat: no-repeat;
+}
+</style>
+<script type="text/javascript">var nav_t_after_inline_CSS = + new Date();</script>
+<!-- -->
+<link href="https://images-na.ssl-images-amazon.com/images/I/71TA9kCIyML._RC|11qlbytjBCL.css,31bOonmFB4L.css,21Wyw4UJQLL.css,31Jg45b6O1L.css,11S8GiSgx9L.css,31OvHRW+XiL.css,01XHMOHpK1L.css_.css?AUIClients/NavDesktopMetaAsset#desktop" rel="stylesheet"/>
+<!-- -->
+<script>
+(window.AmazonUIPageJS ? AmazonUIPageJS : P).when('navCF').execute(function(){
+  (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/71b9ZKAI1-L._RC|61ybdwam-8L.js,41MSv8-3arL.js,01PngnMp3uL.js,01wBjiz9OvL.js,21YI5xZWAwL.js,31SYqzmbU3L.js,51+klsvwgqL.js,31BAecY87JL.js_.js?AUIClients/NavDesktopMetaAsset#desktop');
+});
+</script>
+<!-- From remote config v3-->
+<script type="text/javascript">
+(function(d){document.createElement("header");function b(e){return[].slice.call(e)}function c(f,e){return{m:f,a:b(e)}}var a=function(f){var g={};g._sourceName=f;g._replay=[];g.getNow=function(i,h){return h};function e(i,h,j){i[j]=function(){g._replay.push(h.concat(c(j,arguments)))}}g.when=function(){var i=[c("when",arguments)];var h={};e(h,i,"run");e(h,i,"declare");e(h,i,"publish");e(h,i,"build");return h};e(g,[],"declare");e(g,[],"build");e(g,[],"publish");e(g,[],"importEvent");a._shims.push(g);return g};a._shims=[];if(!d.$Nav){d.$Nav=a("rcx-nav")}if(!d.$Nav.make){d.$Nav.make=a}}(window));
+$Nav.importEvent('navbarJS-beaconbelt');
+$Nav.declare('img.sprite', {
+  'png8': 'https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/global-sprite_bluebeacon-v1._CB327533540_.png',
+  'png32': 'https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/nav-sprite-global_bluebeacon-V3-1x_optimized._CB483188077_.png',
+  'png32-2x': 'https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/nav-sprite-global_bluebeacon-V3-2x_optimized._CB474516457_.png'
+});
+window._navbarSpriteUrl = 'https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/nav-sprite-global_bluebeacon-V3-1x_optimized._CB483188077_.png';
+$Nav.declare('img.pixel', 'https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/transparent-pixel._CB386942464_.gif');
+</script>
+<img alt="" src="https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/nav-sprite-global_bluebeacon-V3-1x_optimized._CB483188077_.png" style="display:none"/>
+<!--[if IE 6]>
+<style type="text/css"><!--
+  #navbar.nav-sprite-v3 .nav-sprite {
+    background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/global-sprite_bluebeacon-v1._CB327533540_.png);
+  }
+--></body></html>
+<?endif]-->
+<script type="text/javascript">var nav_t_after_preload_sprite = + new Date();</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- NAVYAAN -->
+
+
+
+
+
+
+
+<!--Pilu -->
+
+<!-- navmet initial definition -->
+
+
+<script type='text/javascript'>
+    if(window.navmet===undefined) {
+      window.navmet=[];
+      if (window.performance && window.performance.timing && window.ue_t0) {
+        var t = window.performance.timing;
+        var now = + new Date();
+        window.navmet.basic = {
+          'networkLatency': (t.responseStart - t.fetchStart),
+          'navFirstPaint': (now - t.responseStart),
+          'NavStart': (now - window.ue_t0)
+        };
+      }
+    }
+</script>
+
+
+
+
+<script type='text/javascript'>window.navmet.tmp=+new Date();</script>
+  <script type='text/javascript'>
+    window.uet && uet('ns');
+    window._navbar = (function (o) {
+      o.componentLoaded = o.loading = function(){};
+      o.browsepromos = {};
+      o.issPromos = [];
+      return o;
+    }(window._navbar || {}));
+    window._navbar.declareOnLoad = function () { window.$Nav && $Nav.declare('page.load'); };
+    if (window.addEventListener) {
+      window.addEventListener("load", window._navbar.declareOnLoad, false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onload", window._navbar.declareOnLoad);
+    } else if (window.$Nav) {
+      $Nav.when('page.domReady').run("OnloadFallbackSetup", function () {
+        window._navbar.declareOnLoad();
+      });
+    }
+    window.$Nav && $Nav.declare('logEvent.enabled',
+      'false');
+
+    window.$Nav && $Nav.declare('config.lightningDeals', {});
+  </script>
+
+    <style mark="aboveNavInjectionCSS" type="text/css">
+      div#navSwmHoliday.nav-focus {border: none;margin: 0;}
+    </style>
+    <script mark="aboveNavInjectionJS" type="text/javascript">
+      try {
+        if(window.navmet===undefined)window.navmet=[]; if(window.$Nav) { $Nav.when('$', 'config', 'flyout.accountList', 'SignInRedirect', 'dataPanel').run('accountListRedirectFix', function ($, config, flyout, SignInRedirect, dataPanel) { if (!config.accountList) { return; } flyout.getPanel().onData(function (data) { if (SignInRedirect) { var $anchors = $('[data-nav-role=signin]', flyout.elem()); $.each($anchors, function(i, anchorEl) {SignInRedirect.setRedirectUrl($(anchorEl), null, null);});}});}); $Nav.when('$', 'config').run('subnavSpacious', function ($, config) {if(config.pageType === 'ShoppingCart' && config.subPageType === 'NewHUC') { $('#nav-subnav.spacious').hide(); }}); $Nav.when('$').run('defineIsArray', function(jQuery) { if(jQuery.isArray===undefined) { jQuery.isArray=function(param) { if(param.length===undefined) { return false; } return true; }; } }); $Nav.declare('config.cartFlyoutDisabled', 'true'); $Nav.when('$','$F','config','logEvent','panels','phoneHome','dataPanel','flyouts.renderPromo','flyouts.sloppyTrigger','flyouts.accessibility','util.mouseOut','util.onKey','debug.param').build('flyouts.buildSubPanels',function($,$F,config,logEvent,panels,phoneHome,dataPanel,renderPromo,createSloppyTrigger,a11yHandler,mouseOutUtility,onKey,debugParam){var flyoutDebug=debugParam('navFlyoutClick');return function(flyout,event){var linkKeys=[];$('.nav-item',flyout.elem()).each(function(){var $item=$(this);linkKeys.push({link:$item,panelKey:$item.attr('data-nav-panelkey')});});if(linkKeys.length===0){return;} var visible=false;var $parent=$('<div class=\'nav-subcats\'></div>').appendTo(flyout.elem());var panelGroup=flyout.getName()+'SubCats';var hideTimeout=null;var sloppyTrigger=createSloppyTrigger($parent);var showParent=function(){if(hideTimeout){clearTimeout(hideTimeout);hideTimeout=null;} if(visible){return;} var height=$('#nav-flyout-shopAll').height(); $parent.css({'height': height});$parent.animate({width:'show'},{duration:200,complete:function(){$parent.css({overflow:'visible'});}});visible=true;};var hideParentNow=function(){$parent.stop().css({overflow:'hidden',display:'none',width:'auto',height:'auto'});panels.hideAll({group:panelGroup});visible=false;if(hideTimeout){clearTimeout(hideTimeout);hideTimeout=null;}};var hideParent=function(){if(!visible){return;} if(hideTimeout){clearTimeout(hideTimeout);hideTimeout=null;} hideTimeout=setTimeout(hideParentNow,10);};flyout.onHide(function(){sloppyTrigger.disable();hideParentNow();this.elem().hide();});var addPanel=function($link,panelKey){var panel=dataPanel({className:'nav-subcat',dataKey:panelKey,groups:[panelGroup],spinner:false,visible:false});if(!flyoutDebug){var mouseout=mouseOutUtility();mouseout.add(flyout.elem());mouseout.action(function(){panel.hide();});mouseout.enable();} var a11y=a11yHandler({link:$link,onEscape:function(){panel.hide();$link.focus();}});var logPanelInteraction=function(promoID,wlTriggers){var logNow=$F.once().on(function(){var panelEvent=$.extend({},event,{id:promoID});if(config.browsePromos&&!!config.browsePromos[promoID]){panelEvent.bp=1;} logEvent(panelEvent);phoneHome.trigger(wlTriggers);});if(panel.isVisible()&&panel.hasInteracted()){logNow();}else{panel.onInteract(logNow);}};panel.onData(function(data){renderPromo(data.promoID,panel.elem());logPanelInteraction(data.promoID,data.wlTriggers);});panel.onShow(function(){var columnCount=$('.nav-column',panel.elem()).length;panel.elem().addClass('nav-colcount-'+columnCount);showParent();var $subCatLinks=$('.nav-subcat-links > a',panel.elem());var length=$subCatLinks.length;if(length>0){var firstElementLeftPos=$subCatLinks.eq(0).offset().left;for(var i=1;i<length;i++){if(firstElementLeftPos===$subCatLinks.eq(i).offset().left){$subCatLinks.eq(i).addClass('nav_linestart');}} if($('span.nav-title.nav-item',panel.elem()).length===0){var catTitle=$.trim($link.html());catTitle=catTitle.replace(/ref=sa_menu_top/g,'ref=sa_menu');var $subPanelTitle=$('<span class=\'nav-title nav-item\'>'+ catTitle+'</span>');panel.elem().prepend($subPanelTitle);}} $link.addClass('nav-active');});panel.onHide(function(){$link.removeClass('nav-active');hideParent();a11y.disable();sloppyTrigger.disable();});panel.onShow(function(){a11y.elems($('a, area',panel.elem()));});sloppyTrigger.register($link,panel);if(flyoutDebug){$link.click(function(){if(panel.isVisible()){panel.hide();}else{panel.show();}});} var panelKeyHandler=onKey($link,function(){if(this.isEnter()||this.isSpace()){panel.show();}},'keydown',false);$link.focus(function(){panelKeyHandler.bind();}).blur(function(){panelKeyHandler.unbind();});panel.elem().appendTo($parent);};var hideParentAndResetTrigger=function(){hideParent();sloppyTrigger.disable();};for(var i=0;i<linkKeys.length;i++){var item=linkKeys[i];if(item.panelKey){addPanel(item.link,item.panelKey);}else{item.link.mouseover(hideParentAndResetTrigger);}}};});};
+      } catch ( err ) {
+        if ( window.$Nav ) {
+          window.$Nav.when('metrics', 'logUeError').run(function(metrics, log) {
+            metrics.increment('NavJS:AboveNavInjection:error');
+            log(err.toString(), {
+              'attribution': 'rcx-nav',
+              'logLevel': 'FATAL'
+            });
+          });
+        }
+      }
+    </script>
+
+  <noscript>
+    <style type="text/css"><!--
+      #navbar #nav-shop .nav-a:hover {
+        color: #ff9900;
+        text-decoration: underline;
+      }
+      #navbar #nav-search .nav-search-facade,
+      #navbar #nav-tools .nav-icon,
+      #navbar #nav-shop .nav-icon,
+      #navbar #nav-subnav .nav-hasArrow .nav-arrow {
+        display: none;
+      }
+      #navbar #nav-search .nav-search-submit,
+      #navbar #nav-search .nav-search-scope {
+        display: block;
+      }
+      #nav-search .nav-search-scope {
+        padding: 0 5px;
+      }
+      #navbar #nav-search .nav-search-dropdown {
+        position: relative;
+        top: 5px;
+        height: 23px;
+        font-size: 14px;
+        opacity: 1;
+        filter: alpha(opacity = 100);
+      }
+    --></style>
+ </noscript>
+<script type='text/javascript'>window.navmet.push({key:'PreNav',end:+new Date(),begin:window.navmet.tmp});</script>
+
+<a id='nav-top'></a>
+
+
+
+
+<script type='text/javascript'>window.navmet.tmp=+new Date();</script>
+
+  <div id='nav-upnav' aria-hidden='true' style='background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/airstream/upnav/T1/nav_merged_1x._CB472725852_.jpg); background-color: #F6F6F6; text-align: left; background-position: top left; height: 55px; background-repeat: no-repeat; background-size: 1920px; min-width: 1000px;' >
+    <a href="/spark/ref=nav_upnav_merged_T1_GPHelp" class="nav-a"><span class="nav-spanAltText">From The Community</span></a>
+  </div>
+
+
+<script type='text/javascript'>window.navmet.push({key:'UpNav',end:+new Date(),begin:window.navmet.tmp});</script>
+
+
+<script type='text/javascript'>window.navmet.main=+new Date();</script>
+
+<header class = "nav-opt-sprite nav-locale-us nav-lang-en nav-ssl nav-unrec">
+  <div id='navbar' cel_widget_id='Navigation-desktop-navbar' role='navigation' class='nav-sprite-v1 celwidget nav-bluebeacon hamburger nav-packard-glow'>
+    
+    
+    <div id='nav-belt'>
+      
+      
+      
+      <div class='nav-left'>
+        <script type='text/javascript'>window.navmet.tmp=+new Date();</script>
+
+<a href='/gp/site-directory?ref=navm_em_js_disabled' aria-label='Open Menu' id='nav-hamburger-menu'><i class='hm-icon nav-sprite' role='button'></i></a>
+
+<script>
+  var hmenu=document.getElementById("nav-hamburger-menu");hmenu.setAttribute("href","javascript: void(0)"),window.navHamburgerMetricLogger=function(){if(window.ue&&window.ue.count){var e="Nav:Hmenu:IconClickActionPending";window.ue.count(e,(ue.count(e)||0)+1)}window.$Nav&&$Nav.declare("navHMenuIconClicked",!0)},hmenu.addEventListener("click",window.navHamburgerMetricLogger);
+  window.$Nav && $Nav.declare('hamburgerMenuIconAvailableOnLoad', false);  window.$Nav && $Nav.declare('hamburgerMenuWeblabTreatment', 'T1');
+</script>
+<script type='text/javascript'>window.navmet.push({key:'HamburgerMenuIcon',end:+new Date(),begin:window.navmet.tmp});</script>
+        
+        
+        <script type='text/javascript'>window.navmet.tmp=+new Date();</script>
+  <div id="nav-logo" >
+    <a href="/ref=nav_logo" class="nav-logo-link" aria-label="Amazon" tabindex="6">
+      <span class="nav-sprite nav-logo-base"></span>
+      <span class="nav-sprite nav-logo-ext"></span>
+      <span class="nav-sprite nav-logo-locale"></span>
+    </a>
+  <a href="/prime?ref=nav_logo_prime_join" aria-label="" class="nav-sprite nav-logo-tagline nav-prime-try" tabindex="7">
+    Try Prime
+  </a>
+  </div>
+<script type='text/javascript'>window.navmet.push({key:'Logo',end:+new Date(),begin:window.navmet.tmp});</script>
+      </div>
+      <div class='nav-right'>
+        
+        
+        <script type='text/javascript'>window.navmet.tmp=+new Date();</script>
+
+  <div id='nav-swmslot'>
+    <div id="navSwmHoliday" style="width: 400px; height: 39px; overflow: hidden;position: relative;"><a aria-label='Shop 12 Days of Deals' href="/12-Days-of-Deals/b?ie=UTF8&node=5550343011" class="nav-imageHref" ><img src="https://images-na.ssl-images-amazon.com/images/G/01/img18/events/12dod/12DOD_DesktopSWM_400x39_Shop12._CB479370442_.jpg" border="0" /></a></div>
+  </div>
+<script type='text/javascript'>window.navmet.push({key:'SWM',end:+new Date(),begin:window.navmet.tmp});</script>
+      </div>
+      <div class='nav-fill'>
+        
+        
+        
+        <script type='text/javascript'>window.navmet.tmp=+new Date();</script>
+<div id="nav-search">
+  <div id="nav-bar-left"></div>
+  <form
+    accept-charset="utf-8"
+    action="/s/ref=nb_sb_noss"
+    class="nav-searchbar"
+    method="GET"
+    name="site-search"
+    role="search"
+  >
+    <div class="nav-left">
+      <div id="nav-search-dropdown-card">
+        
+  <div class="nav-search-scope nav-sprite">
+    <div class="nav-search-facade" data-value="search-alias=aps">
+      <span class="nav-search-label">All</span>
+      <i class="nav-icon"></i>
+    </div>
+    <span id="searchDropdownDescription" style="display:none">Select the department you want to search in</span>
+    <select
+      aria-describedby="searchDropdownDescription"
+      class="nav-search-dropdown searchSelect"
+      data-nav-digest="cXbQ9FmMHRgxtWxx1WE4NQPSS2A="
+      data-nav-selected="0"
+      id="searchDropdownBox"
+      name="url"
+      style="display: block;"
+      tabindex="18"
+      title="Search in"
+    >
+        <option selected="selected" value="search-alias=aps">All Departments</option>
+        <option value="search-alias=alexa-skills">Alexa Skills</option>
+        <option value="search-alias=amazon-devices">Amazon Devices</option>
+        <option value="search-alias=warehouse-deals">Amazon Warehouse</option>
+        <option value="search-alias=appliances">Appliances</option>
+        <option value="search-alias=mobile-apps">Apps & Games</option>
+        <option value="search-alias=arts-crafts">Arts, Crafts & Sewing</option>
+        <option value="search-alias=automotive">Automotive Parts & Accessories</option>
+        <option value="search-alias=baby-products">Baby</option>
+        <option value="search-alias=beauty">Beauty & Personal Care</option>
+        <option value="search-alias=stripbooks">Books</option>
+        <option value="search-alias=popular">CDs & Vinyl</option>
+        <option value="search-alias=mobile">Cell Phones & Accessories</option>
+        <option value="search-alias=fashion">Clothing, Shoes & Jewelry</option>
+        <option value="search-alias=fashion-womens">&#160;&#160;&#160;Women</option>
+        <option value="search-alias=fashion-mens">&#160;&#160;&#160;Men</option>
+        <option value="search-alias=fashion-girls">&#160;&#160;&#160;Girls</option>
+        <option value="search-alias=fashion-boys">&#160;&#160;&#160;Boys</option>
+        <option value="search-alias=fashion-baby">&#160;&#160;&#160;Baby</option>
+        <option value="search-alias=collectibles">Collectibles & Fine Art</option>
+        <option value="search-alias=computers">Computers</option>
+        <option value="search-alias=courses">Courses</option>
+        <option value="search-alias=financial">Credit and Payment Cards</option>
+        <option value="search-alias=digital-music">Digital Music</option>
+        <option value="search-alias=electronics">Electronics</option>
+        <option value="search-alias=lawngarden">Garden & Outdoor</option>
+        <option value="search-alias=gift-cards">Gift Cards</option>
+        <option value="search-alias=grocery">Grocery & Gourmet Food</option>
+        <option value="search-alias=handmade">Handmade</option>
+        <option value="search-alias=hpc">Health, Household & Baby Care</option>
+        <option value="search-alias=local-services">Home & Business Services</option>
+        <option value="search-alias=garden">Home & Kitchen</option>
+        <option value="search-alias=industrial">Industrial & Scientific</option>
+        <option value="search-alias=prime-exclusive">Just for Prime</option>
+        <option value="search-alias=digital-text">Kindle Store</option>
+        <option value="search-alias=fashion-luggage">Luggage & Travel Gear</option>
+        <option value="search-alias=luxury-beauty">Luxury Beauty</option>
+        <option value="search-alias=magazines">Magazine Subscriptions</option>
+        <option value="search-alias=movies-tv">Movies & TV</option>
+        <option value="search-alias=mi">Musical Instruments</option>
+        <option value="search-alias=office-products">Office Products</option>
+        <option value="search-alias=pets">Pet Supplies</option>
+        <option value="search-alias=pantry">Prime Pantry</option>
+        <option value="search-alias=instant-video">Prime Video</option>
+        <option value="search-alias=software">Software</option>
+        <option value="search-alias=sporting">Sports & Outdoors</option>
+        <option value="search-alias=tools">Tools & Home Improvement</option>
+        <option value="search-alias=toys-and-games">Toys & Games</option>
+        <option value="search-alias=vehicles">Vehicles</option>
+        <option value="search-alias=videogames">Video Games</option>
+    </select>
+  </div>
+
+      </div>
+    </div>
+    <div class="nav-right">
+      <div class="nav-search-submit nav-sprite">
+        <span id="nav-search-submit-text" class="nav-search-submit-text nav-sprite">
+          Go
+        </span>
+        <input type="submit" class="nav-input" value="Go" tabindex="20">
+      </div>
+    </div>
+    <div class="nav-fill">
+      <div class="nav-search-field ">
+        <!-- DO NOT REMOVE: the text in the label are for screen reader, and it is not visible in the web page -->
+        <label id="nav-search-label" for="twotabsearchtextbox" class="aok-offscreen">
+          Search
+        </label>
+        <input
+          type="text"
+          id="twotabsearchtextbox"
+          value=""
+          name="field-keywords"
+          autocomplete="off"
+          placeholder=""
+          class="nav-input"
+          dir="auto"
+          tabindex="19"
+        >
+      </div>
+      <div id="nav-iss-attach"></div>
+    </div>
+  </form>
+</div>
+<script type='text/javascript'>window.navmet.push({key:'Search',end:+new Date(),begin:window.navmet.tmp});</script>
+      </div>
+    </div>
+    <div id='nav-main' class='nav-sprite'>
+      
+      
+      
+      
+      
+      <div class='nav-left'>
+        
+        
+        <div id='nav-global-location-slot'></div>
+        
+        
+        
+        
+        
+        
+        
+      </div>
+      <div class='nav-right'>
+        <script type='text/javascript'>window.navmet.tmp=+new Date();</script>
+        <div id='nav-tools'>
+          
+          
+          
+          
+  <a href="/gp/customer-preferences/select-language/ref=topnav_lang?preferencesReturnUrl=%2F" id="icp-nav-flyout" class="nav-a nav-a-2 icp-link-style-2">
+    <span class="icp-nav-link-inner">
+      <span class="nav-line-1">
+        <span class="icp-nav-globe-img-2"></span>
+        <span class="icp-nav-language">EN</span>
+      </span>
+      <span class="nav-line-2">&nbsp;
+        <span class="nav-icon nav-arrow"></span>
+      </span>
+    </span>
+    <span class="icp-nav-link-border"></span>
+  </a>
+
+          
+<a href="https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fhelp%2Fcustomer%2Fdisplay.html%3Fref_%3Dnav_ya_signin%26nodeId%3DG54HPVAW86CHYHKS%26_encoding%3DUTF8&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&&openid.pape.max_auth_age=0" class="nav-a nav-a-2" data-nav-ref="nav_ya_signin" data-nav-role="signin" data-ux-jq-mouseenter="true" id="nav-link-accountList" tabindex="61">
+  <span class="nav-line-1">Hello. Sign in</span>
+  <span class="nav-line-2">Account & Lists<span class="nav-icon nav-arrow"></span>
+  </span>
+  <span class="nav-line-3">Sign in</span>
+  <span class="nav-line-4">Account & Lists</span>
+</a>
+
+          
+<a href="/gp/css/order-history?ref=nav_orders_first" class="nav-a nav-a-2 nav-single-row-link" id="nav-orders" tabindex="63">
+  <span class="nav-line-1"></span>
+  <span class="nav-line-2">Orders</span>
+</a>
+
+          
+<a href="/gp/prime?ref=nav_prime_try_btn" class="nav-a nav-a-2 nav-single-row-link" data-ux-jq-mouseenter="true" id="nav-link-prime" tabindex="64">
+  <span class="nav-line-1"></span>
+  <span class="nav-line-2">Try Prime<span class="nav-icon nav-arrow"></span>
+  </span>
+</a>
+
+          
+          
+  <a href="/gp/cart/view.html?ref=nav_cart" aria-label="0 items in cart" class="nav-a nav-a-2" id="nav-cart" tabindex="65">
+    <span aria-hidden="true" class="nav-line-1"></span>
+    <span aria-hidden="true" class="nav-line-2">Cart<span class="nav-icon nav-arrow"></span>
+    </span>
+    <span class="nav-cart-icon nav-sprite"></span>
+    <span id="nav-cart-count" aria-hidden="true" class="nav-cart-count nav-cart-0">0</span>
+  </a>
+
+        </div>
+        <script type='text/javascript'>window.navmet.push({key:'Tools',end:+new Date(),begin:window.navmet.tmp});</script>
+      </div>
+      <div class='nav-fill'>
+        
+        
+        
+        
+        
+        
+          
+          
+ <div id="nav-shop">
+ </div>
+          <div id='nav-xshop-container' class=''>
+            <div id='nav-xshop'>
+              
+              
+              <script type='text/javascript'>window.navmet.tmp=+new Date();</script>
+<a id="nav-your-amazon" href="/gp/yourstore/home?ref=nav_cs_ys" class="nav-a" tabindex="47">Your Amazon.com</a>
+
+<a href="/12-Days-of-Deals/b/?ie=UTF8&node=5550343011&ref=nav_cs_gb" class="nav-a" tabindex="48">12 Days of Deals</a>
+
+<a href="/gift-cards/b/?ie=UTF8&node=2238192011&ref=nav_cs_gift_cards" class="nav-a" tabindex="49">Gift Cards</a>
+
+<a href="/wholefoods?ref=nav_cs_whole_foods" class="nav-a" tabindex="50">Whole Foods</a>
+
+<a href="/gp/browse.html?node=16115931011&ref=nav_cs_registry" class="nav-a" tabindex="51">Registry</a>
+
+<a href="/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref=nav_cs_sell" class="nav-a" tabindex="52">Sell</a>
+
+<a href="/gp/help/customer/display.html?nodeId=508510&ref=nav_cs_help" class="nav-a" tabindex="53">Help</a>
+
+<a href="/gp/help/customer/accessibility" aria-label="Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678" class="nav-hidden-aria" tabindex="54">Disability Customer Support</a>
+<script type='text/javascript'>window.navmet.push({key:'CrossShop',end:+new Date(),begin:window.navmet.tmp});</script>
+            </div>
+            
+            
+            
+            
+          </div>
+        
+      </div>
+    </div>
+
+    <div id='nav-subnav-toaster'></div>
+
+    
+    
+    
+    <script type='text/javascript'>window.navmet.tmp=+new Date();</script>
+<div id='nav-subnav'>
+  
+</div>
+<script type='text/javascript'>window.navmet.push({key:'Subnav',end:+new Date(),begin:window.navmet.tmp});</script>
+
+    
+    
+
+    
+    
+    
+  </div>
+
+  
+  
+
+</header>
+<script type='text/javascript'>window.navmet.push({key:'NavBar',end:+new Date(),begin:window.navmet.main});</script>
+
+
+
+    <script type='text/javascript'>window.navmet.tmp=+new Date();</script>
+
+<script type="text/javascript"><!--
+
+window.$Nav && $Nav.declare("config.navDeviceType", "desktop");
+
+window.$Nav && $Nav.when("data").run(function(data) { data({"emptyWishlist":{"template":{"name":"flyoutError","data":{"error":{"button":{"text":"Your Wishlist","url":"/gp/registry/wishlist/"},"title":"Oops!","paragraph":"Your list is empty"}}}},"freshTimeout":{"template":{"name":"flyoutError","data":{"error":{"title":"<style>#nav-flyout-fresh{width:269px;padding:0;}#nav-flyout-fresh .nav-flyout-content{padding:0;}</style><a href='/amazonfresh'><img src='//images-na.ssl-images-amazon.com/images/G/01/omaha/images/yoda/flyout_72dpi._V270255989_.png' /></a>"}}}},"kindleTimeout":{"template":{"name":"flyoutError","data":{"error":{"paragraph":"Unable to retrieve list, please try again later"}}}},"shopAllTimeout":{"template":{"name":"flyoutError","data":{"error":{"paragraph":"Unable to retrieve departments, please try again later"}}}},"primeTimeout":{"template":{"name":"flyoutError","data":{"error":{"title":"<a href='/gp/prime'><img src='//images-na.ssl-images-amazon.com/images/G/01/prime/piv/YourPrimePIV_fallback_CTA._V327346943_.jpg' /></a>"}}}},"errorWishlist":{"template":{"name":"flyoutError","data":{"error":{"button":{"text":"Your Wishlist","url":"/gp/registry/wishlist/"},"title":"Oops!","paragraph":"Unable to retrieve your wishlist"}}}},"yourAccountContent":{"template":{"name":"flyoutError","data":{"error":{"button":{"text":"Your Account","url":"/gp/css/homepage.html"},"title":"Oops!","paragraph":"Unable to retrieve your account"}}}},"cartTimeout":{"template":{"name":"flyoutError","data":{"error":{"button":{"text":"Your Cart","url":"/gp/cart/view.html"},"title":"Oops!","paragraph":"Unable to retrieve your cart."}}}},"ewcTimeout":{"template":{"name":"flyoutError","data":{"error":{"button":{"text":"Your Cart","url":"/gp/cart/view.html"},"title":"Oops!","paragraph":"There's a problem loading your cart right now."}}}}}); });
+
+  window.$Nav && $Nav.when("util.templates").run("FlyoutErrorTemplate", function (templates) {
+    templates.add("flyoutError", "<# if(error.title) { #><span class='nav-title'><#=error.title #></span><# } #><# if(error.paragraph) { #><p class='nav-paragraph'><#=error.paragraph #></p><# } #><# if(error.button) { #><a href='<#=error.button.url #>' class='nav-action-button' ><span class='nav-action-inner'><#=error.button.text #></span></a><# } #>");
+  });
+
+
+  window.$Nav && $Nav.when("data").run(function(data) { data({}); });
+
+window.$Nav && $Nav.declare('config.navDebugHighres', false);
+
+
+window.$Nav && $Nav.declare('config.upnavHighResImgInfo',
+  {"upnav2xImageHeight":"height: 55px","upnav2xImagePath":"https://images-na.ssl-images-amazon.com/images/G/01/airstream/upnav/T1/nav_merged_2x._CB472725852_.jpg"});
+
+window.$Nav && $Nav.declare('config.upnav2xAiryPreloadImgInfo',
+  {"preloadImgPath":"","preloadImgHeight":""});
+
+window.$Nav && $Nav.declare('config.upnav2xAiryPostSlateImgInfo',
+  {"postslateImgHeight":"","postslateImgPath":""});
+
+window.$Nav && $Nav.declare('config.pageType', 'GPHelp');
+window.$Nav && $Nav.declare('config.subPageType', 'Help');
+
+window.$Nav && $Nav.declare('config.dynamicMenuUrl', '/gp/navigation/ajax/dynamic-menu.html');
+
+window.$Nav && $Nav.declare('config.dismissNotificationUrl',
+  '/gp/navigation/ajax/dismissnotification.html');
+
+window.$Nav && $Nav.declare('config.fixedSubBarBeacon',false);
+
+window.$Nav && $Nav.declare('config.enableDynamicMenus', true);
+
+window.$Nav && $Nav.declare('config.isInternal', false);
+
+window.$Nav && $Nav.declare('config.isRecognized', false);
+
+window.$Nav && $Nav.declare('config.transientFlyoutTrigger', '#nav-transient-flyout-trigger');
+
+window.$Nav && $Nav.declare('config.subnavFlyoutUrl',
+  '/gp/navigation/ajax/subnav-flyout');
+
+
+window.$Nav && $Nav.declare('config.readyOnATF', false);
+
+window.$Nav && $Nav.declare('config.dynamicMenuArgs',
+  {"rid":"C3385YSYP3E6KJ8QAM3F","isFullWidthPrime":0,"isPrime":0,"dynamicRequest":1,"weblabs":"","isFreshRegionAndCustomer":"","primeMenuWidth":310});
+
+window.$Nav && $Nav.declare('config.customerName',
+  false);
+
+window.$Nav && $Nav.declare('config.yourAccountPrimeURL',
+  null);
+
+window.$Nav && $Nav.declare('config.yourAccountPrimeHover', true);
+
+window.$Nav && $Nav.declare('config.searchBackState',
+  {});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    if (typeof uet == 'function') {
+      uet('bb', 'iss-init-pc', {wb: 1});
+    }
+
+    if (!window.$SearchJS && window.$Nav) {
+      window.$SearchJS = $Nav.make('sx');
+    }
+
+  
+  var opts = {
+      host: "completion.amazon.com/search/complete"
+    , marketId: "1"
+    , obfuscatedMarketId: "ATVPDKIKX0DER"
+    , searchAliases: ["aps", "amazon-custom-products", "amazon-devices", "amazonbasics", "amazonfresh", "wholefoods", "stripbooks", "popular", "apparel", "electronics", "sporting", "sports-and-fitness", "outdoor-recreation", "fan-shop", "garden", "videogames", "toys-and-games", "jewelry", "digital-text", "digital-music", "prime-digital-music", "watches", "grocery", "hpc", "instant-video", "handmade", "handmade-jewelry", "handmade-home-and-kitchen", "prime-instant-video", "shop-instant-video", "baby-products", "office-products", "software", "magazines", "tools", "automotive", "misc", "industrial", "mi", "pet-supplies", "digital-music-track", "digital-music-album", "mobile", "mobile-apps", "movies-tv", "music-artist", "music-album", "music-song", "stripbooks-spanish", "electronics-accessories", "pantry", "photo", "audio-video", "computers", "furniture", "kitchen", "audible", "audiobooks", "beauty", "shoes", "arts-crafts", "appliances", "gift-cards", "pets", "outdoor", "lawngarden", "collectibles", "replacement-parts", "financial", "fine-art", "fashion", "fashion-womens", "fashion-womens-clothing", "fashion-womens-jewelry", "fashion-womens-shoes", "fashion-womens-watches", "fashion-womens-handbags", "fashion-mens", "fashion-mens-clothing", "fashion-mens-jewelry", "fashion-mens-shoes", "fashion-mens-watches", "fashion-girls", "fashion-girls-clothing", "fashion-girls-jewelry", "fashion-girls-shoes", "fashion-girls-watches", "fashion-boys", "fashion-boys-clothing", "fashion-boys-jewelry", "fashion-boys-shoes", "fashion-boys-watches", "fashion-baby", "fashion-baby-boys", "fashion-baby-girls", "fashion-luggage", "3d-printing", "tradein-aps", "local-services", "vehicles", "video-shorts", "warehouse-deals", "luxury-beauty", "banjo-apps", "black-friday", "cyber-monday", "alexa-skills", "subscribe-with-amazon", "courses", "amazon-global-store", "prime-wardrobe"]
+    , filterAliases: []
+    , pageType: "GPHelp"
+    , requestId: "C3385YSYP3E6KJ8QAM3F"
+    , sessionId: "000-0000000-0000000"
+    , language: "en_US"
+    , customerId: ""
+    , b2b: 0
+    , fresh: 0
+    , biaWidgetUrl: "/gp/yourstore?ie=UTF8&edit=1&p=XLdOttcPyyXVGdAAkAMb4%2FzwMH7OkKvNT5v8gQB2NBQ%2BjJf7pE8w7dSIOh6400G1uCcj%2Bx1X9ZrB0SRN%2BAvJwMaPLo9Nx5KO&ref=nb_sb_ss_bia_acct"
+    , isDdInT3: 0
+    , isDdInT1: 0
+    , isJpOrCn: 0
+    , isUseAuiIss: 1
+  };
+
+  var issOpts = {
+      fallbackFlag: 1
+    , isDigitalFeaturesEnabled: 0
+    , isWayfindingEnabled: 1
+    , dropdown: "select.searchSelect"
+    , departmentText: "in {department}"
+    , suggestionText: "Search suggestions"
+    , recentSearchesTreatment: "C"
+    , authorSuggestionText: "Explore books by XXAUTHXX"
+    , recentSearchesText: "Recent searches"
+    , biaTitleText: "Buy it again"
+    , biaPurchasedText: "Purchased"
+    , biaViewAllText: "View all"
+    , biaViewAllManageText: "View all and manage"
+    , biaAndText: "and"
+    , biaManageText: "manage"
+    , biaWeblabTreatment: ""
+    , issNavConfig: {"weblabTreatments":{"SEARCH_ISS_174372":"C"}}
+    , np: 0
+    , issCorpus: []
+    , cf: 1
+    , useAmazonEmberFontFamily: ""
+    , warmUpConnectionToCompletionSvc: "1"
+    , removeDeepNodeISS: ""
+    , trendingTreatment: "C"
+    , useAPIV2: ""
+    , opfSwitch: ""
+  };
+
+  
+
+  if (opts.isUseAuiIss === 1 && window.$Nav) {
+    window.$Nav.when('sx.iss').run('iss-mason-init', function(iss){
+      var issInitObj = buildIssInitObject(opts, issOpts, true);
+
+      new iss.IssParentCoordinator(issInitObj);
+
+      $SearchJS.declare('canCreateAutocomplete', issInitObj);
+    });
+  } else if (window.$SearchJS) {
+    
+    var iss;
+
+    // BEGIN Deprecated globals
+    var issHost = opts.host
+      , issMktid = opts.marketId
+      , issSearchAliases = opts.searchAliases
+      , updateISSCompletion = function() { iss.updateAutoCompletion(); };
+    // END deprecated globals
+
+    
+    
+    
+    $SearchJS.when('jQuery', 'search-js-autocomplete-lib').run('autocomplete-init', initializeAutocomplete);
+    $SearchJS.when('canCreateAutocomplete').run('createAutocomplete', createAutocomplete);
+
+    
+    if (opts.isDdInT3) {
+      $SearchJS.when('search-js-autocomplete').run('autocomplete-dd-init', function(){ mergeBTFDropdown(); });
+    }
+
+    if (opts.isDdInT1) {
+      $SearchJS.when('search-js-autocomplete').run('autocomplete-dd-init', function(){ searchDropdown(); });
+    }
+
+  } // END conditional for window.$SearchJS
+
+  
+  
+  function initializeAutocomplete(jQuery) {
+    
+    var issInitObj = buildIssInitObject(opts, issOpts);
+    $SearchJS.declare('canCreateAutocomplete', issInitObj);
+  } // END initializeAutocomplete
+
+  
+  
+  function initSearchCsl(searchCSL, issInitObject) {
+    searchCSL.init(opts.pageType, (window.ue && window.ue.rid) || opts.requestId);
+
+    $SearchJS.declare('canCreateAutocomplete', issInitObject);
+  } // END initSearchCsl
+
+  
+  
+  function createAutocomplete(issObject) {
+    iss = new AutoComplete(issObject);
+
+    $SearchJS.publish('search-js-autocomplete', iss);
+
+    logMetrics();
+  } // END createAutocomplete
+
+  
+  
+  function buildIssInitObject(opts, issOpts, isNewIss) {
+    var issInitObj = {
+        src: opts.host
+      , sessionId: opts.sessionId
+      , requestId: opts.requestId
+      , mkt: opts.marketId
+      , obfMkt: opts.obfuscatedMarketId
+      , pageType: opts.pageType
+      , language: opts.language
+      , customerId: opts.customerId
+      , fresh: opts.fresh
+      , b2b: opts.b2b
+      , aliases: opts.searchAliases
+      , fb: issOpts.fallbackFlag
+      , isDigitalFeaturesEnabled: issOpts.isDigitalFeaturesEnabled
+      , isWayfindingEnabled: issOpts.isWayfindingEnabled
+      , issPrimeEligible: issOpts.issPrimeEligible
+      , deptText: issOpts.departmentText
+      , sugText: issOpts.suggestionText
+      , filterAliases: opts.filterAliases
+      , biaWidgetUrl: opts.biaWidgetUrl
+      , recentSearchesTreatment: issOpts.recentSearchesTreatment
+      , authorSuggestionText: issOpts.authorSuggestionText
+      , recentSearchesText: issOpts.recentSearchesText
+      , biaTitleText: issOpts.biaTitleText
+      , biaPurchasedText: issOpts.biaPurchasedText
+      , biaViewAllText: issOpts.biaViewAllText
+      , biaViewAllManageText: issOpts.biaViewAllManageText
+      , biaAndText: issOpts.biaAndText
+      , biaManageText: issOpts.biaManageText
+      , biaWeblabTreatment: issOpts.biaWeblabTreatment
+      , issNavConfig: issOpts.issNavConfig
+      , cf: issOpts.cf
+      , ime: opts.isJpOrCn
+      , mktid: opts.marketId
+      , qs: opts.isJpOrCn
+      , issCorpus: issOpts.issCorpus
+      , deepNodeISS: {
+          searchAliasAccessor: function($) {
+            return (window.SearchPageAccess && window.SearchPageAccess.searchAlias()) ||
+                   $('select.searchSelect').children().attr('data-root-alias');
+          },
+          searchAliasDisplayNameAccessor: function() {
+            return (window.SearchPageAccess && window.SearchPageAccess.searchAliasDisplayName());
+          }
+        }
+      , useAmazonEmberFontFamily: issOpts.useAmazonEmberFontFamily
+      , warmUpConnectionToCompletionSvc: issOpts.warmUpConnectionToCompletionSvc
+      , removeDeepNodeISS: issOpts.removeDeepNodeISS
+      , trendingTreatment: issOpts.trendingTreatment
+      , useAPIV2: issOpts.useAPIV2
+      , opfSwitch: issOpts.opfSwitch
+    };
+
+    // If we aren't using the new ISS then we need to add these properties
+    if (!isNewIss) {
+      issInitObj.dd = issOpts.dropdown; // The element with id searchDropdownBox doesn't exist in C.
+      issInitObj.imeSpacing = issOpts.imeSpacing;
+      issInitObj.isNavInline = 1;
+      issInitObj.triggerISSOnClick = 0;
+      issInitObj.sc = 1;
+      issInitObj.np = issOpts.np;
+    }
+
+    return issInitObj;
+  } // END buildIssInitObject
+
+  
+  function logMetrics() {
+    if (typeof uet == 'function' && typeof uex == 'function' ) {
+      uet('be', 'iss-init-pc', {wb: 1});
+      uex('ld', 'iss-init-pc', {wb: 1});
+    }
+  } // END logMetrics
+
+
+    window.$Nav && $Nav.declare('nav.inline');
+
+(function (i) {
+i.onload = function() {window.uet && uet('ne')};
+i.src = window._navbarSpriteUrl;
+}(new Image()));
+
+window.$Nav && $Nav.declare('config.autoFocus', false);
+
+
+window.$Nav && $Nav.declare('config.responsiveTouchAgents', ["ieTouch"]);
+
+window.$Nav && $Nav.declare('config.responsiveGW',false);
+
+window.$Nav && $Nav.declare('config.pageHideEnabled',false);
+
+window.$Nav && $Nav.declare('config.sslTriggerType','flyoutProximityLarge');
+window.$Nav && $Nav.declare('config.sslTriggerRetry',0);
+
+window.$Nav && $Nav.declare('config.doubleCart',false);
+
+
+window.$Nav && $Nav.declare('config.fixedBarBeacon',false);
+
+window.$Nav && $Nav.declare('config.signInOverride', false);
+
+window.$Nav && $Nav.declare('config.signInTooltip',false);
+
+window.$Nav && $Nav.declare('config.isPrimeMember',false);
+
+window.$Nav && $Nav.declare('config.packardGlowTooltip', false);
+
+window.$Nav && $Nav.declare('config.packardGlowFlyout', false);
+
+window.$Nav && $Nav.declare('config.rightMarginAlignEnabled', true);
+
+window.$Nav && $Nav.declare('config.flyoutAnimation', false);
+
+window.$Nav && $Nav.declare('config.campusActivation', '');
+
+
+
+
+    window.$Nav && $Nav.declare('config.primeTooltip',{url:'/gp/prime/digital-adoption/navigation-bar'});
+
+window.$Nav && $Nav.declare('config.primeDay',false);
+
+window.$Nav && $Nav.declare('config.disableBuyItAgain', false);
+
+
+
+
+
+  
+
+
+
+window.$Nav && $Nav.declare('config.pseudoPrimeFirstBrowse',false);
+
+window.$Nav && $Nav.declare('config.sdaYourAccount',false);
+
+window.$Nav && $Nav.declare('config.csYourAccount',{url:"/gp/youraccount/navigation/sidepanel"});
+
+window.$Nav && $Nav.declare('config.cartFlyoutDisabled', true);
+
+  window.$Nav && $Nav.declare('config.isTabletBrowser', false);
+  window.$Nav && $Nav.declare('config.HmenuProximityArea', [200,200,200,200]);
+  window.$Nav && $Nav.declare('config.HMenuIsProximity', true);
+
+window.$Nav && $Nav.declare('config.navfresh', false);
+window.$Nav && $Nav.declare('config.isFreshRegion', false);
+
+
+
+
+
+
+
+window.$Nav && $Nav.declare('config.ewc', false);if (window.ue && ue.tag) { ue.tag('noewc'); }
+if (window.ue && ue.tag) { ue.tag('navbar'); };
+
+window.$Nav && $Nav.declare('config.blackbelt', true);
+window.$Nav && $Nav.declare('config.beaconbelt', true);
+
+window.$Nav && $Nav.declare('config.beaconbeltCover', true);
+
+window.$Nav && $Nav.declare('config.accountList', true);
+
+window.$Nav && $Nav.declare('config.pinnedNav',false);
+
+window.$Nav && $Nav.declare('config.pinnedNavWithEWC',false);
+
+window.$Nav && $Nav.declare('config.pinnedNavStart',150);
+
+window.$Nav && $Nav.declare('config.pinnedNavMinWidth',900);
+window.$Nav && $Nav.declare('config.pinnedNavMinHeight',700);
+
+window.$Nav && $Nav.declare('config.iPadTablet', false);
+
+
+window.$Nav && $Nav.declare('config.searchapiEndpoint',false);
+
+window.$Nav && $Nav.declare('config.timeline', false);
+
+window.$Nav && $Nav.declare('config.timelineAsinPriceEnabled', false);
+
+window.$Nav && $Nav.declare('config.timelineDeleteEnabled',false);
+
+
+window.$Nav && $Nav.declare('config.searchTimeline', false);
+
+window.$Nav && $Nav.declare('config.searchTopCategories', false);
+
+    window._navbar = window._navbar || {};
+    window._navbar.browsepromos = window._navbar.browsepromos || {};
+    
+    window.$Nav && $Nav.declare('config.browsePromos', window._navbar.browsepromos);
+
+
+window.$Nav && $Nav.declare('config.extendedFlyout', false);
+
+
+  window.$Nav && $Nav.declare('config.hamburgerMenuAjaxUrl',
+    '/gp/navigation/ajax/generic.html');
+
+window.$Nav && $Nav.declare('config.pssFlag', 0);
+
+
+
+if (window.P && typeof window.P.declare === "function" && typeof window.P.now === "function") {
+  window.P.now('packardGlowIngressJsEnabled').execute(function(glowEnabled) {
+    if (!glowEnabled) {
+      window.P.declare('packardGlowIngressJsEnabled', true);
+    }
+  });
+  window.P.now('packardGlowStoreName').execute(function(storeName) {
+    if (!storeName) {
+      window.P.declare('packardGlowStoreName', 'help');
+    }
+  });
+    window.P.declare('packardSpeedDesktopEnabled', true);
+}
+
+
+window.$Nav && $Nav.declare('configComplete');
+
+--></script>
+
+<script type='text/javascript'>window.navmet.push({key:'PostNav',end:+new Date(),begin:window.navmet.tmp});</script>
+
+
+
+
+
+
+<script type='text/javascript'>window.navmet.MainEnd = new Date();</script>
+<!-- EndNav -->
+    
+
+<div class='cs-help-v4'>
+
+  <!-- Help Header -->
+  <div class="cs-help-header">
+      <div class="inner">
+        
+
+
+
+<div class="a-row a-spacing-top-small">
+    <div class="a-column a-span9">
+         <a class="cs-help-title" href="/gp/help/customer/display.html?ie=UTF8&nodeId=508510">Help & Customer Service</a>
+    </div>
+</div>
+
+      </div>
+    </div>
+  <!-- /Help Header -->
+
+  <div class='cs-help-container'>
+    <div class='cs-help-content'>
+      
+      <div>
+      	<!-- Main content -->
+      	
+
+
+
+<div class="cs-help-breadcrumb">
+  <a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=200127470">Amazon Device Support </a><span class="a-list-item">&nbsp;&rsaquo;&nbsp;</span><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=200529680">Fire & Kindle Software Updates</a><span>&rsaquo;</span>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="help-content">
+
+ 
+<a name="GUID-BA46D21D-3463-44FF-B85F-110299C4242D"></a>
+<h1>Kindle Paperwhite (10th Generation) Software Updates</h1>
+  
+   
+  
+<div>
+<p class="lead"> We have a new, free software update available for your Kindle Paperwhite (10th Generation). This update automatically downloads and installs on your Kindle Paperwhite (10th Generation) when connected wirelessly; however, you can also manually download the software and transfer the update to your device via USB cable.</p>
+ 
+	 
+<div id="GUID-BA46D21D-3463-44FF-B85F-110299C4242D__SECTION_83EB328880CB4BD2BAFDC2835AB5F9D2">
+<a name="GUID-BA46D21D-3463-44FF-B85F-110299C4242D__SECTION_83EB328880CB4BD2BAFDC2835AB5F9D2"></a>
+</div>
+<p>Here&rsquo;s what&rsquo;s new: 
+		<ul id="GUID-BA46D21D-3463-44FF-B85F-110299C4242D__UL_53BC6F7E6D8B4ACD9053316901A1523E">
+<li>
+<span class="a-list-item">Swipe-able Home: Swipe up on your home screen to see additional tips, recommendations, and more based on your reading habits.</span>
+</li>
+
+<li>
+<span class="a-list-item">Easily personalize your reading: Now save multiple reading settings, selecting the font, boldness level, and orientation settings you prefer all from the main menu and quickly switch between those settings.</span>
+</li>
+
+<li>
+<span class="a-list-item">Return borrowed books: You can return Kindle Owners&rsquo; Lending Library books from within your library by long pressing on a borrowed book and selecting return.</span>
+</li>
+ 
+<li>
+<span class="a-list-item">Battery percentage: The percent of battery remaining is shown.</span>
+</li>
+
+<li>
+<span class="a-list-item">Labels for the standard toolbar: Labels are added under each icon on the standard toolbar for improved navigation.</span>
+</li>
+
+<li>
+<span class="a-list-item">This update is required to read Arabic language books.</span>
+</li>
+
+<li>
+<span class="a-list-item">Performance improvements and other general enhancements.</span>
+</li>
+ 
+		
+</ul>
+
+</p>
+ 
+	 
+ 
+	 
+<div id="GUID-BA46D21D-3463-44FF-B85F-110299C4242D__SECTION_EAAB47F6F8AF4A0889157D9622E7F3FD">
+<a name="GUID-BA46D21D-3463-44FF-B85F-110299C4242D__SECTION_EAAB47F6F8AF4A0889157D9622E7F3FD"></a>
+</div>
+<h2>Download Kindle Paperwhite (10th Generation) Software Updates</h2>
+<p>Your Kindle should download and install the latest software version while connected to Wi-Fi and charging.</p>
+
+<p>You can also manually download and install a software update. Before manually downloading the software update, determine the current software version on your Kindle.</p>
+ 
+	 
+ 
+	 
+<div id="GUID-BA46D21D-3463-44FF-B85F-110299C4242D__SECTION_53E93C1D51374E6D92B3EB6985140BAD">
+<a name="GUID-BA46D21D-3463-44FF-B85F-110299C4242D__SECTION_53E93C1D51374E6D92B3EB6985140BAD"></a>
+</div>
+<p>To determine the current software version on your Kindle: 
+		<br>
+<ol>
+<li>
+<span class="a-list-item">From <strong>Home</strong>, tap the <strong>Menu</strong> icon, and then tap <strong>Settings</strong>.</span>
+</li>
+
+<li>
+<span class="a-list-item">From <strong>Settings</strong>, tap the <strong>Menu</strong> icon again, and then tap <strong>Device Info</strong>.</span>
+</li>
+ 
+		
+</ol>
+
+</p>
+
+<p>If you have the latest update, it should look like this: Kindle 5.10.1.2</p>
+ 
+	 
+ 
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	 
+<div id="GUID-BA46D21D-3463-44FF-B85F-110299C4242D__GUID-1CF8C839-0CA4-4D14-8EC8-AD9B711028BF">
+<a name="GUID-BA46D21D-3463-44FF-B85F-110299C4242D__GUID-1CF8C839-0CA4-4D14-8EC8-AD9B711028BF"></a>
+</div>
+<p>If you do not have this software version, click the link below to download the software update to your computer:</p>
+ 
+<p>
+<span><span><a href="https://s3.amazonaws.com/firmwaredownloads/update_kindle_all_new_paperwhite_v2_5.10.1.2.bin" target="_blank">Software Update 5.10.1.2</a></span></span>
+</p>
+ 
+<p>After you've downloaded the file to your computer, see <a href="/gp/help/customer/display.html?nodeId=202109170">Transfer &amp; Install a Kindle E-Reader Software Update</a> for instructions on installing the update.</p>
+ 
+	 
+ 
+	 
+<div id="GUID-BA46D21D-3463-44FF-B85F-110299C4242D__SECTION_7F9B3384C9DD4E67A7EEE1F6B112D89C">
+<a name="GUID-BA46D21D-3463-44FF-B85F-110299C4242D__SECTION_7F9B3384C9DD4E67A7EEE1F6B112D89C"></a>
+</div>
+<p>In accordance with certain free and open source software licenses, Amazon is pleased to offer an archive file of source code for this software update:</p>
+
+<p> 
+		
+<ul id="GUID-BA46D21D-3463-44FF-B85F-110299C4242D__UL_539CFDA7B511446B9B0BD2B93C555D89">
+<li>
+<span class="a-list-item"><span><span><a href="http://kindledownloads.s3.amazonaws.com/Kindle_src_5.10.1.2_3360340004.tar.gz" target="_blank">Download Source Code</a></span></span></span>
+</li>
+
+<li>
+<span class="a-list-item"><span><a href="https://s3-us-west-2.amazonaws.com/customerdocumentation/Source+Code+Notices/Kindle+Ereaders/KPap-8th-5.10.1.txt" target="_blank">Download Legal and Open Source Notices</a> (in English)</span></span>
+</li>
+ 
+		
+</ul>
+
+</p>
+ 
+	 
+ 
+	 
+<div id="GUID-BA46D21D-3463-44FF-B85F-110299C4242D__GUID-6F2521D8-ADEE-4981-BE40-7494556345C7">
+<a name="GUID-BA46D21D-3463-44FF-B85F-110299C4242D__GUID-6F2521D8-ADEE-4981-BE40-7494556345C7"></a>
+</div>
+<p>
+<span><span>Related Help Topics</span></span> 
+		
+<ul class="a-nostyle">
+<li>
+<span class="a-list-item"><a href="/gp/help/customer/display.html?nodeId=202109190">Troubleshooting Kindle E-Reader Software Updates</a></span>
+</li>
+ 
+		
+</ul>
+ 
+</p>
+ 
+	 
+ 
+  
+</div>
+ 
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+  (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/01w%2BNzt64PL.js?AUIClients/CSHelpHMDJS');
+</script>
+
+
+
+<div class="a-box-group a-spacing-top-base">
+
+   <div id="hmd-FeedbackBox" class="a-box a-box-normal a-text-left a-width-extra-large"><div class="a-box-inner">
+      <p>
+         Was this information helpful?
+      </p>
+
+      <span class="a-declarative" data-action="a-hmd-yes" data-a-hmd-yes="{}">
+         <span class="a-button a-button-base"><span class="a-button-inner"><input class="a-button-input" type="submit"><span class="a-button-text" aria-hidden="true">
+            Yes
+         </span></span></span>
+      </span>
+
+      <span class="a-declarative" data-action="a-hmd-no" data-a-hmd-no="{}">
+         <span class="a-button a-button-base"><span class="a-button-inner"><input class="a-button-input" type="submit"><span class="a-button-text" aria-hidden="true">
+            No
+         </span></span></span>
+      </span>
+   </div></div> <!-- box !-->
+
+   <div id="hmd-ConfirmYesBox" class="a-box a-box-normal a-text-left a-width-extra-large a-hidden"><div class="a-box-inner">
+      <p>
+         Thank you for your feedback.
+      </p>
+   </div></div> <!-- box !-->
+
+   <div id="hmd-ReasonBox" class="a-box a-box-normal a-text-left a-width-extra-large a-hidden"><div class="a-box-inner">
+      <p>
+         Please select what best describes the information:
+      </p>
+      <fieldset class="a-spacing-base">
+          <div data-a-input-name="info" class="a-radio"><label><input type="radio" name="info" value="Confused By Information"><i class="a-icon a-icon-radio"></i><span class="a-label a-radio-label">
+              This information is confusing or wrong
+          </span></label></div>
+          <div data-a-input-name="info" class="a-radio"><label><input type="radio" name="info" value="Not What Looking For"><i class="a-icon a-icon-radio"></i><span class="a-label a-radio-label">
+              This isn't the information I was looking for
+          </span></label></div>
+          <div data-a-input-name="info" class="a-radio"><label><input type="radio" name="info" value="Didn't Like What Found"><i class="a-icon a-icon-radio"></i><span class="a-label a-radio-label">
+              I don't like this policy
+          </span></label></div>
+      </fieldset>
+
+      <div class="a-input-text-wrapper a-hidden"><textarea maxlength="200" placeholder="More comments on help content here..." id="hmd-Comments"></textarea></div>
+
+      <span class="a-declarative" data-action="a-hmd-submit" data-a-hmd-submit="{}">
+         <span class="a-button a-spacing-top-medium a-button-base"><span class="a-button-inner"><input class="a-button-input" type="submit"><span class="a-button-text" aria-hidden="true">
+            Submit
+         </span></span></span>
+      </span>
+
+   </div></div> <!-- box !-->
+
+   <div id="hmd-ConfirmNoBox" class="a-box a-box-normal a-text-left a-width-extra-large a-hidden"><div class="a-box-inner">
+      <p>
+         
+	Thanks! While we're unable to respond directly to your feedback, 
+	we'll use this information to improve our online Help.
+    
+      </p>
+   </div></div> <!-- box !-->
+
+   <input type="hidden" name="hmd-qid" id="hmd-qid">
+   <input type="hidden" name="hmd-nodeId" value="G54HPVAW86CHYHKS" id="hmd-nodeId">
+
+</div> <!-- box_group !-->
+
+    
+    
+    
+
+
+
+
+
+  
+<script language="javascript">
+  if ( ! window.stageMarkers) {
+     window.stageMarkers = {};
+     window.stageMarkers.count = {};
+     window.stageMarkers.stage = function (stage, t) {
+       window.stageMarkers.count[stage] = 1 + (window.stageMarkers.count[stage] ? window.stageMarkers.count[stage] : 0);
+       if (window.stageMarkers.count[stage?>= t) {
+          if(typeof P !== 'undefined'){
+            P.trigger(stage);
+          }else{
+             amznJQ.completedStage(stage);
+          }
+       }
+     }
+  }
+
+<div id="cf-div" style="display:none;">
+<img alt="" border="0" height="1" onload="if (typeof uet == 'function') { uet('cf'); }" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/transparent-pixel._CB386942464_.gif" width="1"/><img alt="" border="0" height="1" onload="if (typeof uet == 'function') { uet('cf'); }" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/transparent-pixel._CB386942464_.gif" width="1"/>
+</div>
+
+<div class="a-section a-spacing-small" id="csg-search-cu">
+<hr class="a-spacing-extra-large a-spacing-top-extra-large a-divider-normal"/>
+<div class="a-row csg-search-box">
+<form action="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=" id="search-help" method="get" name="search-help">
+<input name="__mk_en_US" type="hidden" value="ÅMÅŽÕÑ"/>
+<div class="a-column a-span10">
+<div class="a-row">
+<div class="a-search a-span12"><i class="a-icon a-icon-search"></i><input autocomplete="off" class="a-input-text a-span12" id="helpsearch" maxlength="100" name="help_keywords" placeholder="Search Help" type="search"/></div>
+</div>
+<div class="a-row">
+<div class="a-section a-text-left a-span12 a-box" id="help_srch_sggst" style="display: none;">
+</div>
+</div>
+</div>
+<div class="a-column a-span2 a-span-last">
+<span class="a-button a-button-span12 a-button-base a-button-dark" id="helpSearchSubmit"><span class="a-button-inner"><input aria-labelledby="helpSearchSubmit-announce" class="a-button-input" type="submit"/><span aria-hidden="true" class="a-button-text" id="helpSearchSubmit-announce">Go
+	                </span></span></span>
+</div>
+<input name="search" type="hidden" value="true"/>
+<input name="nodeId" type="hidden" value="G54HPVAW86CHYHKS"/>
+<input id="searchPlaceholder" name="kwHidden" type="hidden" value="true"/>
+<input id="searchAutocomplete" name="sprefix" type="hidden"/>
+<input name="locale" type="hidden" value="en_US"/>
+</form>
+</div>
+</div>
+
+<div class="cs-help-sidebar">
+<!-- Sidebar content -->
+<div class="a-section a-spacing-small" id="search-help-sidebar">
+<div class="a-row search-help">
+<form action="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=" id="search-help" method="get" name="search-help">
+<input name="__mk_en_US" type="hidden" value="ÅMÅŽÕÑ">
+<div class="a-column a-span9">
+<div class="a-row">
+<div class="a-search a-span12"><i class="a-icon a-icon-search"></i><input autocomplete="off" class="a-input-text a-span12" id="helpsearch" maxlength="100" name="help_keywords" placeholder="Search Help" type="search"/></div>
+</div>
+<div class="a-row">
+<div class="a-section a-text-left a-span12 a-box" id="help_srch_sggst" style="display: none;">
+</div>
+</div>
+</div>
+<div class="a-column a-span3 a-span-last">
+<span class="a-button a-button-span12 a-button-base a-button-dark" id="helpSearchSubmit"><span class="a-button-inner"><input aria-labelledby="helpSearchSubmit-announce" class="a-button-input" type="submit"/><span aria-hidden="true" class="a-button-text" id="helpSearchSubmit-announce">Go
+	                </span></span></span>
+</div>
+<input name="search" type="hidden" value="true"/>
+<input name="nodeId" type="hidden" value="G54HPVAW86CHYHKS"/>
+<input id="searchPlaceholder" name="kwHidden" type="hidden" value="true"/>
+<input id="searchAutocomplete" name="sprefix" type="hidden"/>
+<input name="locale" type="hidden" value="en_US"/>
+</input></form>
+</div>
+</div>
+<div class="cs-help-sidebar-module topic-sidebar">
+<div class="inner">
+<span>
+<span class="a-color-state">‹</span>
+<a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=508510">All Help Topics</a>
+</span>
+</div>
+<div class="inner">
+<h3>Fire &amp; Kindle Software Updates</h3>
+<ul class="nav-topics"><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201618290">Download and Install Fire Tablet Software Updates Automatically</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201642370">Download and Install Fire Tablet Software Updates Manually</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=GPX9XJHC582PBRQG">Fire Tablet HD 8 (8th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=202194760">Fire HD 10 (7th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=202144590">Fire (7th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=202144610">Fire HD 8 (7th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=202073860">Fire HD 8 (6th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201830190">Fire HD 10 (5th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201830200">Fire HD 8 (5th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201830180">Fire (5th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201596890">Fire HDX 8.9 (4th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201596850">Fire HD 7 (4th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201596860">Fire HD 6 (4th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201357220">Kindle Fire HDX 8.9" (3rd Generation) Software Update</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201357190">Kindle Fire HDX (3rd Generation) Software Update</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201357170">Kindle Fire HD (3rd Generation) Software Update</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201075600">Kindle Fire HD 8.9" (2nd Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201016350">Kindle Fire HD 7" (2nd Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201016370">Kindle Fire (2nd Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=200790620">Kindle Fire (1st Generation) Software Updates </a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=202048000">Important Kindle E-Reader Software Update</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=202109170">Transfer &amp; Install a Kindle E-Reader Software Update</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=202109190">Troubleshooting Kindle E-Reader Software Updates</a></li><li class="selected">Software Updates for Kindle Paperwhite (10th Generation)</li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=202200380">Kindle Oasis (9th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=202065490">Kindle (8th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=202037720">Kindle Oasis (8th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201756220">Kindle Paperwhite (7th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201630670">Kindle Voyage (7th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201605570">Kindle (7th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201307450">Kindle Paperwhite (6th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201064850">Kindle Paperwhite (5th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=200774090">Kindle (5th Generation) Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=200790650">Kindle Touch Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=200529700">Kindle Keyboard Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=201504450">Kindle DX Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=200529740">Kindle 2nd Generation Software Updates</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=200529750">Kindle (1st Generation) Software Updates</a></li></ul>
+</div>
+</div>
+<div class="a-section cs-help-sidebar-module take-action-sidebar">
+<div class="a-section inner">
+<h3>
+        Quick solutions
+    </h3>
+<div class="a-row a-spacing-micro a-grid-vertical-align a-grid-center">
+<div class="a-column a-span4">
+<a class="a-link-normal quick-solution-action" href="/gp/digital/fiona/manage">
+<img alt="" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/Devices_clear-bg._CB312767865_.png"/>
+<div style="display: none;">
+                    Devices &amp; Content
+                    Deliver books, apps to your device
+                </div>
+</a>
+</div>
+<div class="a-column a-span8 a-span-last">
+<a class="a-link-normal quick-solution-action" href="/gp/digital/fiona/manage">
+<p class="a-spacing-none a-size-base a-color-base">
+                    Devices &amp; Content
+                </p>
+<p class="a-size-small a-color-tertiary">
+                    Deliver books, apps to your device
+                </p>
+</a>
+</div>
+</div>
+<div class="a-row a-spacing-micro a-grid-vertical-align a-grid-center">
+<div class="a-column a-span4">
+<a class="a-link-normal quick-solution-action" href="/gp/css/order-history?ie=UTF8&amp;unifiedOrders=0">
+<img alt="" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/digital-purchases-qs._CB287763009_.png"/>
+<div style="display: none;">
+                    Digital Purchases
+                    View purchased books &amp; apps
+                </div>
+</a>
+</div>
+<div class="a-column a-span8 a-span-last">
+<a class="a-link-normal quick-solution-action" href="/gp/css/order-history?ie=UTF8&amp;unifiedOrders=0">
+<p class="a-spacing-none a-size-base a-color-base">
+                    Digital Purchases
+                </p>
+<p class="a-size-small a-color-tertiary">
+                    View purchased books &amp; apps
+                </p>
+</a>
+</div>
+</div>
+<div class="a-row a-spacing-micro a-grid-vertical-align a-grid-center">
+<div class="a-column a-span4">
+<a class="a-link-normal quick-solution-action" href="/gp/mas/your-account/myapps/yoursubscriptions">
+<img alt="" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/subscribe-qs._CB286265463_.png"/>
+<div style="display: none;">
+                    Your Subscriptions
+                    Edit payment info
+                </div>
+</a>
+</div>
+<div class="a-column a-span8 a-span-last">
+<a class="a-link-normal quick-solution-action" href="/gp/mas/your-account/myapps/yoursubscriptions">
+<p class="a-spacing-none a-size-base a-color-base">
+                    Your Subscriptions
+                </p>
+<p class="a-size-small a-color-tertiary">
+                    Edit payment info
+                </p>
+</a>
+</div>
+</div>
+<div class="a-row a-spacing-micro a-grid-vertical-align a-grid-center">
+<div class="a-column a-span4">
+<a class="a-link-normal quick-solution-action" href="/gp/css/account/address/view.html">
+<img alt="" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/1-click-qs._CB286268781_.png"/>
+<div style="display: none;">
+                    1-Click Settings
+                    Change your address
+                </div>
+</a>
+</div>
+<div class="a-column a-span8 a-span-last">
+<a class="a-link-normal quick-solution-action" href="/gp/css/account/address/view.html">
+<p class="a-spacing-none a-size-base a-color-base">
+                    1-Click Settings
+                </p>
+<p class="a-size-small a-color-tertiary">
+                    Change your address
+                </p>
+</a>
+</div>
+</div>
+<div class="a-row a-spacing-micro a-grid-vertical-align a-grid-center">
+<div class="a-column a-span4">
+<a class="a-link-normal quick-solution-action" href="https://www.amazon.com:443/gp/redirect.html?location=https://www.amazonforum.com/&amp;token=7403779A951E7EEF76076A3FBD08106F1514A7A2&amp;source=standards">
+<img alt="" src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/gateway/digital-device-forum-bw-qs._CB514127144_.png"/>
+<div style="display: none;">
+                    Digital &amp; Device Forum
+                    Ask the community
+                </div>
+</a>
+</div>
+<div class="a-column a-span8 a-span-last">
+<a class="a-link-normal quick-solution-action" href="https://www.amazon.com:443/gp/redirect.html?location=https://www.amazonforum.com/&amp;token=7403779A951E7EEF76076A3FBD08106F1514A7A2&amp;source=standards">
+<p class="a-spacing-none a-size-base a-color-base">
+                    Digital &amp; Device Forum
+                </p>
+<p class="a-size-small a-color-tertiary">
+                    Ask the community
+                </p>
+</a>
+</div>
+</div>
+<hr class="a-divider-normal"/>
+<span class="a-button a-button-base"><span class="a-button-inner"><a class="a-button-text" href="/gp/help/customer/contact-us/ref=hp_ss_qs_v3_dv_cu_t2&amp;initialIssue=asin-order" role="button">
+        Contact Us
+    </a></span></span>
+</div>
+</div>
+</div>
+
+
+<div class="a-divider a-divider-section">
+<div class="a-divider-inner"></div>
+</div>
+<div class="navLeftFooter nav-sprite-v1" id="navFooter"><a href="#nav-top" id="navBackToTop"><div class="navFooterBackToTop"><span class="navFooterBackToTopText">Back to top</span></div></a>
+<div class="navFooterVerticalColumn navAccessibility" role="presentation"><div class="navFooterVerticalRow navAccessibility" style="display: table-row;"><div class="navFooterLinkCol navAccessibility"><div class="navFooterColHead">Get to Know Us</div><ul><li class="nav_first"><a class="nav_a" href="https://www.amazon.jobs">Careers</a></li><li><a class="nav_a" href="https://blog.aboutamazon.com/?utm_source=gateway&amp;utm_medium=footer">Blog</a></li><li><a class="nav_a" href="https://www.aboutamazon.com/?utm_source=gateway&amp;utm_medium=footer">About Amazon</a></li><li><a class="nav_a" href="https://www.amazon.com/pr">Press Center</a></li><li><a class="nav_a" href="https://www.amazon.com/ir">Investor Relations</a></li><li class="nav_last"><a class="nav_a" href="/amazon-devices/b?ie=UTF8&amp;node=2102313011">Amazon Devices</a></li></ul></div><div class="navFooterColSpacerInner navAccessibility"></div><div class="navFooterLinkCol navAccessibility"><div class="navFooterColHead">Make Money with Us</div><ul><li class="nav_first"><a class="nav_a" href="https://www.amazon.com:443/gp/redirect.html?_encoding=UTF8&amp;location=https%3A%2F%2Fservices.amazon.com%2Fcontent%2Fsell-on-amazon.htm%2Fref%3Dfooter_soa%3Fld%3DAZFSSOA&amp;source=standards&amp;token=6D14D9F0E8CC2831C68BA56C95FCDC34988C3979">Sell on Amazon</a></li><li><a class="nav_a" href="https://www.amazon.com/l/ref=map_1_b2b_GW_FT?node=17882322011">Sell Under Private Brands</a></li><li><a class="nav_a" href="https://www.amazon.com:443/gp/redirect.html?_encoding=UTF8&amp;location=https%3A%2F%2Fservices.amazon.com%2Fhandmade%2Fhandmade.html%3Fld%3DAZUSHNDFooter&amp;source=standards&amp;token=0DB36349EAB72B987928A46EC862BDF86C9039B4">Sell on Amazon Handmade</a></li><li><a class="nav_a" href="https://www.amazon.com:443/gp/redirect.html?_encoding=UTF8&amp;location=https%3A%2F%2Fservices.amazon.com%2Fselling-services%2Fbenefits.htm%3Fld%3DAZUSVAS-globalfooter&amp;source=standards&amp;token=C11D6CD96DB34C590F5368F18106AAC385ECAAC6">Sell Your Services on Amazon</a></li><li><a class="nav_a" href="https://services.amazon.com/amazon-business.html?ld=usb2bunifooter">Sell on Amazon Business</a></li><li><a class="nav_a" href="https://developer.amazon.com">Sell Your Apps on Amazon</a></li><li><a class="nav_a" href="https://affiliate-program.amazon.com/">Become an Affiliate</a></li><li><a class="nav_a" href="https://advertising.amazon.com/?ref=ext_amzn_ftr">Advertise Your Products</a></li><li><a class="nav_a" href="/gp/seller-account/mm-summary-page.html?ie=UTF8&amp;ld=AZFooterSelfPublish&amp;topic=200260520">Self-Publish with Us</a></li><li class="nav_last nav_a_carat"><span class="nav_a_carat">›</span><a class="nav_a" href="/b/?_encoding=UTF8&amp;ld=AZUSSOA-seeall&amp;node=13605942011">See all</a></li></ul></div><div class="navFooterColSpacerInner navAccessibility"></div><div class="navFooterLinkCol navAccessibility"><div class="navFooterColHead">Amazon Payment Products</div><ul><li class="nav_first"><a class="nav_a" href="/iss/credit/rewardscardmember?_encoding=UTF8&amp;plattr=CBFOOT">Amazon Rewards Visa Signature Cards</a></li><li><a class="nav_a" href="/iss/credit/storecardmember?_encoding=UTF8&amp;plattr=PLCCFOOT">Amazon.com Store Card</a></li><li><a class="nav_a" href="/dp/B07984JN3L?_encoding=UTF8&amp;ie=UTF-8&amp;plattr=ACOMFO">Amazon Business Card</a></li><li><a class="nav_a" href="/dp/B07CBJQS16?_encoding=UTF8&amp;ie=UTF-8&amp;place=camp&amp;plattr=CCLFOOT&amp;pr=ibprox">Amazon.com Corporate Credit Line</a></li><li><a class="nav_a" href="/b?ie=UTF8&amp;node=16218619011">Shop with Points</a></li><li><a class="nav_a" href="/compare-credit-card-offers/b?ie=UTF8&amp;node=3561432011">Credit Card Marketplace</a></li><li><a class="nav_a" href="/Reload-Your-Gift-Card-Balance/b?ie=UTF8&amp;node=10232440011">Reload Your Balance</a></li><li class="nav_last"><a class="nav_a" href="/Currency-Converter/b?ie=UTF8&amp;node=388305011">Amazon Currency Converter</a></li></ul></div><div class="navFooterColSpacerInner navAccessibility"></div><div class="navFooterLinkCol navAccessibility"><div class="navFooterColHead">Let Us Help You</div><ul><li class="nav_first"><a class="nav_a" href="/gp/css/homepage.html">Your Account</a></li><li><a class="nav_a" href="/gp/css/order-history">Your Orders</a></li><li><a class="nav_a" href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=468520">Shipping Rates &amp; Policies</a></li><li><a class="nav_a" href="/gp/prime">Amazon Prime</a></li><li><a class="nav_a" href="/gp/css/returns/homepage.html">Returns &amp; Replacements</a></li><li><a class="nav_a" href="/gp/digital/fiona/manage">Manage Your Content and Devices</a></li><li><a class="nav_a" href="/gp/BIT/ref=footer_bit_v2_us_A0029?bitCampaignCode=A0029">Amazon Assistant</a></li><li class="nav_last"><a class="nav_a" href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=508510">Help</a></li></ul></div></div></div><div class="nav-footer-line"></div>
+<div class="navFooterLine navFooterLinkLine navFooterPadItemLine"><span><div class="navFooterLine navFooterLogoLine"><a href="/"><div class="nav-logo-base nav-sprite"></div></a></div>
+</span><ul></ul><span class="icp-container-desktop"><div class="navFooterLine">
+<style type="text/css">
+  #icp-touch-link-language { display: none; }
+</style>
+<a class="icp-button" href="/gp/customer-preferences/select-language?ie=UTF8&amp;preferencesReturnUrl=%2F" id="icp-touch-link-language">
+<div class="icp-nav-globe-img-2 icp-button-globe-2"></div><span class="icp-color-base">English</span><span class="nav-arrow icp-up-down-arrow"></span><span class="aok-hidden" style="display:none">Choose a language for shopping.</span>
+</a>
+<style type="text/css">
+#icp-touch-link-country { display: none; }
+</style>
+<a class="icp-button" href="/gp/navigation-country/select-country?ie=UTF8&amp;preferencesReturnUrl=%2F" id="icp-touch-link-country">
+<span class="icp-flag-3 icp-flag-3-us"></span><span class="icp-color-base">United States</span><span class="aok-hidden" style="display:none">Choose a country/region for shopping.</span>
+</a>
+</div>
+</span><ul></ul></div>
+<div aria-label="More on Amazon.com" class="navFooterLine navFooterLinkLine navFooterDescLine" role="navigation"><table cellspacing="0" class="navFooterMoreOnAmazon"><tr>
+<td class="navFooterDescItem"><a class="nav_a" href="https://music.amazon.com?ref=dm_aff_amz_com">Amazon Music<br/> <span class="navFooterDescText">Stream millions<br/> of songs</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="https://advertising.amazon.com/?ref=footer_advtsing_amzn_com">Amazon Advertising<br/> <span class="navFooterDescText">Find, attract, and<br/> engage customers</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="/STRING-subnav_primephotos_amazondrive/b?ie=UTF8&amp;node=15547130011">Amazon Drive<br/> <span class="navFooterDescText">Cloud storage<br/> from Amazon</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.6pm.com">6pm<br/> <span class="navFooterDescText">Score deals<br/> on fashion brands</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="https://www.abebooks.com">AbeBooks<br/> <span class="navFooterDescText">Books, art<br/> &amp; collectibles</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.acx.com/">ACX <br/> <span class="navFooterDescText">Audiobook Publishing<br/> Made Easy</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.alexa.com">Alexa<br/> <span class="navFooterDescText">Actionable Analytics<br/> for the Web</span></a></td>
+</tr>
+<tr><td> </td></tr>
+<tr>
+<td class="navFooterDescItem"><a class="nav_a" href="/business">Amazon Business<br/> <span class="navFooterDescText">Everything For<br/> Your Business</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="/AmazonFresh/b?ie=UTF8&amp;node=10329849011">AmazonFresh<br/> <span class="navFooterDescText">Groceries &amp; More<br/> Right To Your Door</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="/International-Shipping-Direct/b?ie=UTF8&amp;node=230659011">AmazonGlobal<br/> <span class="navFooterDescText">Ship Orders<br/> Internationally</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="/services">Home Services<br/> <span class="navFooterDescText">Handpicked Pros<br/> Happiness Guarantee</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="https://www.amazoninspire.com/?ref=amazon_footer">Amazon Inspire<br/> <span class="navFooterDescText">Digital Educational<br/>  Resources</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="https://rapids.amazon.com/?ref=rapids_acq_gatewayfooter">Amazon Rapids<br/> <span class="navFooterDescText">Fun stories for<br/>  kids on the go</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="https://primenow.amazon.com/restaurants?ref_=amzrst_nav_footer">Amazon Restaurants<br/> <span class="navFooterDescText">Food delivery from<br/> local restaurants</span></a></td>
+</tr>
+<tr><td> </td></tr>
+<tr>
+<td class="navFooterDescItem"><a class="nav_a" href="https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&amp;sc_campaign=amazonfooter">Amazon Web Services<br/> <span class="navFooterDescText">Scalable Cloud<br/> Computing Services</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="https://www.audible.com">Audible<br/> <span class="navFooterDescText">Download<br/> Audiobooks</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.bookdepository.com">Book Depository<br/> <span class="navFooterDescText">Books With Free<br/> Delivery Worldwide</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.boxofficemojo.com/?ref_=amzn_nav_ftr">Box Office Mojo<br/> <span class="navFooterDescText">Find Movie<br/> Box Office Data</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.comixology.com">ComiXology<br/> <span class="navFooterDescText">Thousands of<br/> Digital Comics</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.createspace.com">CreateSpace<br/> <span class="navFooterDescText">Indie Print Publishing<br/> Made Easy</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.dpreview.com">DPReview<br/> <span class="navFooterDescText">Digital<br/> Photography</span></a></td>
+</tr>
+<tr><td> </td></tr>
+<tr>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.eastdane.com/welcome">East Dane<br/> <span class="navFooterDescText">Designer Men's<br/> Fashion</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.fabric.com">Fabric<br/> <span class="navFooterDescText">Sewing, Quilting<br/> &amp; Knitting</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.goodreads.com">Goodreads<br/> <span class="navFooterDescText">Book reviews<br/> &amp; recommendations</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.imdb.com">IMDb<br/> <span class="navFooterDescText">Movies, TV<br/> &amp; Celebrities</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://pro.imdb.com?ref_=amzn_nav_ftr">IMDbPro<br/> <span class="navFooterDescText">Get Info Entertainment<br/> Professionals Need</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.junglee.com">Junglee.com<br/> <span class="navFooterDescText">Shop Online<br/> in India</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://kdp.amazon.com">Kindle Direct Publishing<br/> <span class="navFooterDescText">Indie Digital Publishing<br/> Made Easy
+</span></a></td>
+</tr>
+<tr><td> </td></tr>
+<tr>
+<td class="navFooterDescItem"><a class="nav_a" href="https://primenow.amazon.com/?ref=HOUD12C322_0_GlobalFooter">	
+Prime Now<br/> <span class="navFooterDescText">Ultrafast Delivery<br/> on Everyday Items</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="/STRING-subnav-prime-photos/b?ie=UTF8&amp;node=13234696011">Amazon Photos<br/> <span class="navFooterDescText">Unlimited Photo Storage<br/> Free With Prime</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="https://videodirect.amazon.com/home/landing">Prime Video Direct<br/> <span class="navFooterDescText">Video Distribution<br/> Made Easy</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.shopbop.com/welcome">Shopbop<br/> <span class="navFooterDescText">Designer<br/> Fashion Brands</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="/Warehouse-Deals/b?ie=UTF8&amp;node=10158976011">Amazon Warehouse<br/> <span class="navFooterDescText">Great Deals on<br/> Quality Used Products </span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.wholefoodsmarket.com">Whole Foods Market<br/> <span class="navFooterDescText">America’s Healthiest<br/> Grocery Store</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.withoutabox.com?ref_=amzn_nav_ftr">Withoutabox<br/> <span class="navFooterDescText">Submit to<br/> Film Festivals</span></a></td>
+</tr>
+<tr><td> </td></tr>
+<tr>
+<td class="navFooterDescItem"><a class="nav_a" href="https://www.woot.com/">Woot!<br/> <span class="navFooterDescText">Deals and <br/> Shenanigans</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.zappos.com">Zappos<br/> <span class="navFooterDescText">Shoes &amp;<br/> Clothing</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="https://www.souq.com?ref=footer_souq">Souq.com<br/> <span class="navFooterDescText">Shop Online in<br/> the Middle East</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="/b?ie=UTF8&amp;node=14498690011">Subscribe with Amazon<br/> <span class="navFooterDescText">Discover &amp; try<br/> subscription services</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="http://www.pillpack.com">PillPack<br/> <span class="navFooterDescText">Pharmacy Simplified</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="/Certified-Refurbished/b?ie=UTF8&amp;node=12653393011">Amazon Renewed<br/> <span class="navFooterDescText">Refurbished products<br/> with a warranty</span></a></td>
+<td class="navFooterDescSpacer" style="width: 4%"></td>
+<td class="navFooterDescItem"><a class="nav_a" href="/amazonsecondchance">Amazon Second Chance<br/> <span class="navFooterDescText">Pass it on, trade it in,<br/> give it a second life</span></a></td>
+</tr>
+</table></div>
+<div class="navFooterLine navFooterLinkLine navFooterPadItemLine navFooterCopyright"><ul><li class="nav_first"><a class="nav_a" href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=508088">Conditions of Use</a></li><li><a class="nav_a" href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=468496">Privacy Notice</a></li><li><a class="nav_a" href="/interestbasedads/ref=footer_iba">Interest-Based Ads</a></li><li class="nav_last">© 1996-2018, Amazon.com, Inc. or its affiliates</li></ul></div>
+</div><!-- whfh-jvjbMXiEsMlP5+jmZdLwbyUGU5dwLlCboUJ5xx57xp9bb2NRrEOGPcF3gEbHqNFW rid-C3385YSYP3E6KJ8QAM3F -->
+<div aria-hidden="true" id="sis_pixel_r2" style="height:1px; position: absolute; left: -1000000px; top: -1000000px;"></div><script>(function(a,b){a.attachEvent?a.attachEvent("onload",b):a.addEventListener&&a.addEventListener("load",b,!1)})(window,function(){setTimeout(function(){var el=document.getElementById("sis_pixel_r2");el&&(el.innerHTML='<iframe id="DAsis" src="//s.amazon-adsystem.com/iu3?d=amazon.com&slot=navFooter&a2=0101a1823ca3d5d46ce03d4502edf28f095b20f780c29eddcddebefb2933fa9c1e98&old_oo=0&ts=1543947806730&s=AeDS-KSu2ndxDqgcH5WXjpApzqon0vUSXkbsxxPqZkm0&cb=1543947806730" width="1" height="1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>')},300)});</script>
+<div style="display: none">
+<div class="nav-empty nav-flyout-content nav-ajax-prime-menu" id="nav-prime-menu">
+<div class="nav_dynamic"></div>
+<div class="nav-ajax-message"></div>
+<div class="nav-ajax-error-msg">
+<p class="nav_p nav-bold">There's a problem loading this menu right now.</p>
+<p class="nav_p"><a class="nav_a" href="/gp/prime">Learn more about Amazon Prime.</a></p>
+</div>
+</div>
+</div>
+<style>
+  #nav-prime-tooltip{
+    padding: 0 20px 2px 20px;
+    background-color: white;
+    font-family: arial,sans-serif;
+  }
+  .nav-npt-text-title{
+    font-family: arial,sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 21px;
+    color: #E47923;
+  }
+  .nav-npt-text-detail, a.nav-npt-a{
+    font-family: arial,sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    color: #333333;
+    margin: 2px 0px;
+  }
+  a.nav-npt-a {
+    text-decoration: underline;
+  }
+</style>
+<div style="display: none">
+<div id="nav-prime-tooltip">
+<div class="nav-npt-text-title"> Get fast, free shipping with Amazon Prime </div>
+<div class="nav-npt-text-detail"> Prime members enjoy FREE Two-Day Shipping and exclusive access to music, movies, TV shows, original audio series, and Kindle books. </div>
+<div class="nav-npt-text-detail">
+      &gt;
+      <a class="nav-npt-a" href="/gp/prime">Get started</a>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+  window.$Nav && $Nav.when("data").run(function(data) { data({"yourAccountContent":{"template":{"name":"itemList","data":{"items":[{"text":"Your Account","url":"/gp/css/homepage.html"},{"text":"Your Orders","url":"/gp/css/order-history","id":"nav_prefetch_yourorders"},{"text":"Your Lists","url":"/gp/registry/wishlist?ie=UTF8&requiresSignIn=1"},{"text":"Your Recommendations","url":"/gp/yourstore"},{"text":"Your Subscribe & Save Items","url":"/gp/subscribe-and-save/manager/viewsubscriptions"},{"text":"Memberships & Subscriptions","url":"/yourmembershipsandsubscriptions"},{"text":"Your Service Requests","url":"/localservices/ya/servicerequests"},{"text":"Your Prime Membership","url":"/gp/subs/primeclub/account/homepage.html"},{"text":"Your Garage","url":"/gp/your-garage/"},{"text":"Your Pets","url":"/yourpets"},{"text":"Start a Selling Account","url":"/b/?_encoding=UTF8&ld=AZUSSOA-yaflyout&node=12766669011"},{"text":"Register for a Business Account","url":"/b?ie=UTF8&node=11261610011"},{"text":"Your Amazon Credit Cards","url":"/Credit-Cards/b?ie=UTF8&node=1266766011"},{"text":"Your Content and Devices","url":"/mn/dcw/myx.html"},{"text":"Your Music Library","url":"/gp/dmusic/mp3/player"},{"text":"Your Amazon Photos","url":"/STRING-subnav-prime-photos/b?ie=UTF8&node=13234696011"},{"text":"Your Amazon Drive","url":"/clouddrive"},{"text":"Your Prime Video","url":"/Prime-Instant-Video/s/browse?_encoding=UTF8&node=2676882011"},{"text":"Your Kindle Unlimited","url":"/gp/kindle/ku/ku_central"},{"text":"Your Watchlist","url":"/gp/video/watchlist"},{"text":"Your Video Library","url":"/gp/video/library"},{"text":"Your Android Apps & Devices","url":"/gp/mas/your-account/myapps"}]}},"signInHtml":"<div id='nav-flyout-ya-signin' class='nav-flyout-content'><a href='/gp/navigation/redirector.html?ie=UTF8&amp;associationHandle=usflex&amp;currentPageURL=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fhome%3Fie%3DUTF8%26ref_%3Dnav_signin&amp;pageType=&amp;switchAccount=&amp;yshURL=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fhome%3Fie%3DUTF8%26ref_%3Dnav_signin' rel='nofollow' class='nav-action-button' data-nav-role='signin' data-nav-ref='nav_signin'><span class='nav-action-inner'>Sign in</span></a><div id='nav-flyout-ya-newCust' class='nav_pop_new_cust nav-flyout-content'>New customer? <a href='https://www.amazon.com/ap/register?_encoding=UTF8&amp;openid.assoc_handle=usflex&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.mode=checkid_setup&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&amp;openid.pape.max_auth_age=0&amp;openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fhome%3Fie%3DUTF8%26ref_%3Dnav_newcust' rel='nofollow' class='nav-a'>Start here.</a></div></div>","wlTriggers":"98075:104259"},"wishlistContent":{"template":{"name":"itemList","data":{"items":[{"text":"Create a List","url":"/gp/registry/wishlist?ie=UTF8&triggerElementID=createList"},{"text":"Find a List or Registry","url":"/gp/registry/search"},{"text":"Find a Gift","url":"/gcx/Gifts-for-Adults/gfhz/"},{"subtext":"Install Amazon Assistant","text":"Save Items from the Web","url":"/gp/BIT?ie=UTF8&bitCampaignCode=a0032"},{"text":"Wedding Registry","url":"/wedding/home"},{"text":"Baby Registry","url":"/baby-reg/homepage"},{"text":"Friends & Family Gifting","url":"/gp/gift-central/organizer"},{"text":"AmazonSmile Charity Lists","url":"/gp/clpf"},{"text":"Pantry Lists","url":"/gp/pantry/yourlists"},{"text":"Your Hearts","url":"/stream/saves/items"},{"text":"Explore Idea Lists","url":"/ideas"},{"text":"Explore Showroom","url":"/showroom"},{"text":"Scout | Style Explorer","url":"/scout/"}]}},"wlTriggers":"57042:165723:159729:167383"},"cartContent":{"html":"<div id='nav-cart-flyout' class='nav-empty nav-flyout-content' data-one='{count} item' data-many='{count} items'><div class='nav-dynamic-full'><div id='nav-cart-standard' class='nav-cart-content'><a href='/gp/cart/view.html?ie=UTF8&amp;hasWorkingJavascript=1' class='nav-cart-title'>Items in your Cart</a><div class='nav-cart-subtitle'></div><div class='nav-cart-items'></div></div><div id='nav-cart-pantry' class='nav-cart-content' data-box='{count} box' data-boxes='{count} boxes' data-box-filled='{pct}% filled' data-boxes-filled='{pct}% filled in current box'><a href='/gp/cart/view.html?ie=UTF8&amp;hasWorkingJavascript=1' class='nav-cart-title'>Prime Pantry Items</a><div class='nav-cart-subtitle'></div><div class='nav-cart-items'></div></div><div id='nav-cart-fresh' class='nav-cart-content'><a href='/gp/cart/view.html?ie=UTF8&amp;hasWorkingJavascript=1' class='nav-cart-title'><img id='nav-cart-fresh-logo' src='https://images-na.ssl-images-amazon.com/images/G/01/gno/ec-logo-fresh-color._CB305770688_.png'></a><div class='nav-cart-subtitle'></div><div class='nav-cart-items'></div></div></div><div class='nav-ajax-message'></div><div class='nav-dynamic-empty'><p class='nav_p nav-bold nav-cart-empty'> Your Shopping Cart is empty.</p><p class='nav_p '> Give it purpose&mdash;fill it with books, DVDs, clothes, electronics, and more.</p><p class='nav_p '> If you already have an account, <a href='/gp/navigation/redirector.html?ie=UTF8&associationHandle=usflex&currentPageURL=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fhome%3Fie%3DUTF8%26ref_%3Dnav_signin_cart&pageType=&switchAccount=&yshURL=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fhome%3Fie%3DUTF8%26ref_%3Dnav_signin_cart' class='nav_a'>sign in</a>.</p></div><div class='nav-ajax-error-msg'><p class='nav_p nav-bold'> There's a problem previewing your cart right now.</p><p class='nav_p '> Check your Internet connection and <a href='/gp/cart/view.html?ie=UTF8&hasWorkingJavascript=1' class='nav_a'>go to your cart</a>, or <a href='javascript:void(0);' class='nav_a nav-try-again'>try again</a>.</p></div><div id='nav-cart-footer'><a href='/gp/cart/view.html?ie=UTF8&amp;hasWorkingJavascript=1' id='nav-cart-menu-button' class='nav-action-button'><span class='nav-action-inner'>View Cart<span id='nav-cart-menu-button-count' ><span id='nav-cart-zero'>(<span class='nav-cart-count'>0</span> items)</span><span id='nav-cart-one' style='display: none;'>(<span class='nav-cart-count'>0</span> item)</span><span id='nav-cart-many' style='display: none;'>(<span class='nav-cart-count'>0</span> items)</span></span></span></a></div></div>"},"signinContent":{"html":"<div id='nav-signin-tooltip'><a href='/gp/navigation/redirector.html?ie=UTF8&amp;associationHandle=usflex&amp;currentPageURL=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fhome%3Fie%3DUTF8%26ref_%3Dnav_custrec_signin&amp;pageType=&amp;switchAccount=&amp;yshURL=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fhome%3Fie%3DUTF8%26ref_%3Dnav_custrec_signin' class='nav-action-button' data-nav-role='signin' data-nav-ref='nav_custrec_signin'><span class='nav-action-inner'>Sign in</span></a><div class='nav-signin-tooltip-footer'>New customer? <a href='https://www.amazon.com/ap/register?_encoding=UTF8&amp;openid.assoc_handle=usflex&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.mode=checkid_setup&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&amp;openid.pape.max_auth_age=0&amp;openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fhome%3Fie%3DUTF8%26ref_%3Dnav_custrec_newcust' class='nav-a'>Start here.</a></div></div>"},"accountListContent":{"html":"<div id='nav-al-container'><div id='nav-al-signin'><div id='nav-flyout-ya-signin' class='nav-flyout-content'><a href='/gp/navigation/redirector.html?ie=UTF8&amp;associationHandle=usflex&amp;currentPageURL=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fhome%3Fie%3DUTF8%26ref_%3Dnav_signin&amp;pageType=&amp;switchAccount=&amp;yshURL=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fhome%3Fie%3DUTF8%26ref_%3Dnav_signin' rel='nofollow' class='nav-action-button' data-nav-role='signin' data-nav-ref='nav_signin'><span class='nav-action-inner'>Sign in</span></a><div id='nav-flyout-ya-newCust' class='nav_pop_new_cust nav-flyout-content'>New customer? <a href='https://www.amazon.com/ap/register?_encoding=UTF8&amp;openid.assoc_handle=usflex&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.mode=checkid_setup&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&amp;openid.pape.max_auth_age=0&amp;openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fhome%3Fie%3DUTF8%26ref_%3Dnav_newcust' rel='nofollow' class='nav-a'>Start here.</a></div></div></div><div id='nav-al-wishlist' class='nav-al-column nav-tpl-itemList'><div class='nav-title' id='nav-al-title'>Your Lists</div><a href='/gp/registry/wishlist?ie=UTF8&amp;triggerElementID=createList' class='nav-link nav-item'><span class='nav-text'>Create a List</span></a><a href='/gp/registry/search' class='nav-link nav-item'><span class='nav-text'>Find a List or Registry</span></a><a href='/gcx/Gifts-for-Adults/gfhz/' class='nav-link nav-item'><span class='nav-text'>Find a Gift</span></a><a href='/gp/BIT?ie=UTF8&amp;bitCampaignCode=a0032' class='nav-link nav-item'><span class='nav-text'>Save Items from the Web</span></a><a href='/wedding/home' class='nav-link nav-item'><span class='nav-text'>Wedding Registry</span></a><a href='/baby-reg/homepage' class='nav-link nav-item'><span class='nav-text'>Baby Registry</span></a><a href='/gp/gift-central/organizer' class='nav-link nav-item'><span class='nav-text'>Friends & Family Gifting</span></a><a href='/gp/clpf' class='nav-link nav-item'><span class='nav-text'>AmazonSmile Charity Lists</span></a><a href='/gp/pantry/yourlists' class='nav-link nav-item'><span class='nav-text'>Pantry Lists</span></a><a href='/stream/saves/items' class='nav-link nav-item'><span class='nav-text'>Your Hearts</span></a><a href='/ideas' class='nav-link nav-item'><span class='nav-text'>Explore Idea Lists</span></a><a href='/showroom' class='nav-link nav-item'><span class='nav-text'>Explore Showroom</span></a><a href='/scout/' class='nav-link nav-item'><span class='nav-text'>Scout | Style Explorer</span></a></div><div id='nav-al-your-account' class='nav-al-column nav-template nav-flyout-content nav-tpl-itemList'><div class='nav-title'>Your Account</div><a href='/gp/css/homepage.html' class='nav-link nav-item'><span class='nav-text'>Your Account</span></a><a href='/gp/css/order-history' class='nav-link nav-item' id='nav_prefetch_yourorders'><span class='nav-text'>Your Orders</span></a><a href='/gp/registry/wishlist?ie=UTF8&amp;requiresSignIn=1' class='nav-link nav-item'><span class='nav-text'>Your Lists</span></a><a href='/gp/yourstore' class='nav-link nav-item'><span class='nav-text'>Your Recommendations</span></a><a href='/gp/subscribe-and-save/manager/viewsubscriptions' class='nav-link nav-item'><span class='nav-text'>Your Subscribe & Save Items</span></a><a href='/yourmembershipsandsubscriptions' class='nav-link nav-item'><span class='nav-text'>Memberships & Subscriptions</span></a><a href='/localservices/ya/servicerequests' class='nav-link nav-item'><span class='nav-text'>Your Service Requests</span></a><a href='/gp/subs/primeclub/account/homepage.html' class='nav-link nav-item'><span class='nav-text'>Your Prime Membership</span></a><a href='/gp/your-garage/' class='nav-link nav-item'><span class='nav-text'>Your Garage</span></a><a href='/yourpets' class='nav-link nav-item'><span class='nav-text'>Your Pets</span></a><a href='/b/?_encoding=UTF8&amp;ld=AZUSSOA-yaflyout&amp;node=12766669011' class='nav-link nav-item'><span class='nav-text'>Start a Selling Account</span></a><a href='/b?ie=UTF8&amp;node=11261610011' class='nav-link nav-item'><span class='nav-text'>Register for a Business Account</span></a><a href='/Credit-Cards/b?ie=UTF8&amp;node=1266766011' class='nav-link nav-item'><span class='nav-text'>Your Amazon Credit Cards</span></a><a href='/mn/dcw/myx.html' class='nav-link nav-item'><span class='nav-text'>Your Content and Devices</span></a><a href='/gp/dmusic/mp3/player' class='nav-link nav-item'><span class='nav-text'>Your Music Library</span></a><a href='/STRING-subnav-prime-photos/b?ie=UTF8&amp;node=13234696011' class='nav-link nav-item'><span class='nav-text'>Your Amazon Photos</span></a><a href='/clouddrive' class='nav-link nav-item'><span class='nav-text'>Your Amazon Drive</span></a><a href='/Prime-Instant-Video/s/browse?_encoding=UTF8&amp;node=2676882011' class='nav-link nav-item'><span class='nav-text'>Your Prime Video</span></a><a href='/gp/kindle/ku/ku_central' class='nav-link nav-item'><span class='nav-text'>Your Kindle Unlimited</span></a><a href='/gp/video/watchlist' class='nav-link nav-item'><span class='nav-text'>Your Watchlist</span></a><a href='/gp/video/library' class='nav-link nav-item'><span class='nav-text'>Your Video Library</span></a><a href='/gp/mas/your-account/myapps' class='nav-link nav-item'><span class='nav-text'>Your Android Apps & Devices</span></a></div></div>"},"templates":{"asin-promo":"<a href='<#=destination #>' class='nav_asin_promo'>  <img src='<#=image #>' class='nav_asin_promo_img'/>  <span class='nav_asin_promo_headline'><#=headline #></span>  <span class='nav_asin_promo_info'>    <span class='nav_asin_promo_title'><#=productTitle #></span>    <span class='nav_asin_promo_title2'><#=productTitle2 #></span>    <span class='nav_asin_promo_price'><#=price #></span>  </span>  <span class='nav_asin_promo_button nav-sprite'><#=button #></span></a>","discoveryPanelList":"<# var renderItems = function(items) { #>    <span class='nav-dp-title nav-item'>    Deliveries at a glance    <div class='nav-divider-container'><div class='nav-divider'></div></div></span>    <# jQuery.each(items, function (i, item) { #>        <span class='nav-item'>            <a href='<#=item.order_link#>' class='nav-dp-link'>                <span class='nav-dp-left-column'>                    <img src='<#=item.image#>' class='nav-dp-image'/>                </span>                <span class='nav-dp-right-column'>                    <span class='nav-dp-text <#=item.status#>'>                        <#=item.status_text#>                        <br/>                    </span>                    <# if(item.secondary_status_text) { #>                        <span class='nav-dp-text-secondary <#=item.status#>'>                            <#=item.secondary_status_text#>                        </span>                    <# } #>                </span>            </a>            <div class='nav-divider-container'><div class='nav-divider'></div></div>        </span>  <# }); #>  <a href='/your-orders/ref=nav_dp_ayo' class='nav-dp-link-emphasis'>      View all orders  </a><# }; #><# renderItems(items); #>","itemList":"<# var hasColumns = (function () {  var checkColumns = function (_items) {    if (!_items) {      return false;    }    for (var i=0; i<_items.length; i++) {      if (_items[i].columnBreak || (_items[i].items && checkColumns(_items[i].items))) {        return true;      }    }    return false;  };  return checkColumns(items);}()); #><# if(hasColumns) { #>  <# if(items[0].image && items[0].image.src) { #>    <div class='nav-column nav-column-first nav-column-image'>  <# } else if (items[0].greeting) { #>    <div class='nav-column nav-column-first nav-column-greeting'>  <# } else { #>    <div class='nav-column nav-column-first'>  <# } #><# } #><# var renderItems = function(items) { #>  <# jQuery.each(items, function (i, item) { #>    <# if(hasColumns && item.columnBreak) { #>      <# if(item.image && item.image.src) { #>        </div><div class='nav-column nav-column-notfirst nav-column-break nav-column-image'>      <# } else if (item.greeting) { #>        </div><div class='nav-column nav-column-notfirst nav-column-break nav-column-greeting'>      <# } else { #>        </div><div class='nav-column nav-column-notfirst nav-column-break'>      <# } #>    <# } #>    <# if(item.dividerBefore) { #>      <div class='nav-divider'></div>    <# } #>    <# if(item.text || item.content) { #>      <# if(item.url) { #>        <a href='<#=item.url #>' class='nav-link      <# } else {#>        <span class='      <# } #>      <# if(item.panelKey) { #>        nav-hasPanel      <# } #>      <# if(item.items) { #>        nav-title      <# } #>      <# if(item.decorate == 'carat') { #>        nav-carat      <# } #>      <# if(item.decorate == 'nav-action-button') { #>        nav-action-button      <# } #>      nav-item'      <# if(item.extra) { #>        <#=item.extra #>      <# } #>      <# if(item.id) { #>        id='<#=item.id #>'      <# } #>      <# if(item.dataNavRole) { #>        data-nav-role='<#=item.dataNavRole #>'      <# } #>      <# if(item.dataNavRef) { #>        data-nav-ref='<#=item.dataNavRef #>'      <# } #>      <# if(item.panelKey) { #>        data-nav-panelkey='<#=item.panelKey #>'        role='navigation'        aria-label='<#=item.text#>'      <# } #>      <# if(item.subtextKey) { #>        data-nav-subtextkey='<#=item.subtextKey #>'      <# } #>      <# if(item.image && item.image.height > 16) { #>        style='line-height:<#=item.image.height #>px;'      <# } #>      >      <# if(item.decorate == 'carat') { #>        <i class='nav-icon'></i>      <# } #>      <# if(item.image && item.image.src) { #>        <img class='nav-image' src='<#=item.image.src #>' style='height:<#=item.image.height #>px; width:<#=item.image.width #>px;' />      <# } #>      <# if(item.text) { #>        <span class='nav-text<# if(item.classname) { #> <#=item.classname #><# } #>'><#=item.text#><# if(item.badgeText) { #>          <span class='nav-badge'><#=item.badgeText#></span>        <# } #></span>      <# } else if (item.content) { #>        <span class='nav-content'><# jQuery.each(item.content, function (j, cItem) { #><# if(cItem.url && cItem.text) { #><a href='<#=cItem.url #>' class='nav-a'><#=cItem.text #></a><# } else if (cItem.text) { #><#=cItem.text#><# } #><# }); #></span>      <# } #>      <# if(item.subtext) { #>        <span class='nav-subtext'><#=item.subtext #></span>      <# } #>      <# if(item.url) { #>        </a>      <# } else {#>        </span>      <# } #>    <# } #>    <# if(item.image && item.image.src) { #>      <# if(item.url) { #>        <a href='<#=item.url #>'>       <# } #>      <img class='nav-image'      <# if(item.id) { #>        id='<#=item.id #>'      <# } #>      src='<#=item.image.src #>' <# if (item.alt) { #> alt='<#= item.alt #>'<# } #>/>      <# if(item.url) { #>        </a>       <# } #>    <# } #>    <# if(item.items) { #>      <div class='nav-panel'> <# renderItems(item.items); #> </div>    <# } #>  <# }); #><# }; #><# renderItems(items); #><# if(hasColumns) { #>  </div><# } #>","notificationsList":"<div class='nav-item nav-title'>  Notifications</div><# jQuery.each(items || [], function (i, item) { #>  <div class='nav-item<# if (item.type) { #> nav-noti-list-<#= item.type #><# } #><# if (item.image && item.image.src) { #> nav-noti-list-with-image<# } #>'>    <# if (item.dismissId) { #>      <div class='nav-noti-list-x' data-noti-id='<#= item.dismissId #>'>&times;</div>    <# } #>    <# if (item.image && item.image.src) { #>      <div class='nav-noti-list-image'>        <img class='nav-noti-list-image-tag' src='<#= item.image.src #>' <# if (item.image.alt) { #> alt='<#= item.image.alt #>'<# } #> <# if (item.image.title) { #> title='<#= item.image.title #>'<# } #>/>      </div>    <# } #>    <# if (item.heading) { #>      <div class='nav-noti-list-heading'><#= item.heading #></div>    <# } #>    <# jQuery.each(item.content || [], function (j, itemContent) { #>      <# if (itemContent.url) { #>        <a href='<#= itemContent.url #>' class='nav-noti-list-content'>      <# } else { #>        <div class='nav-noti-list-content'>      <# } #>        <# if (itemContent.text) { #>          <span class='nav-noti-list-text'><#= itemContent.text #></span>        <# } #>        <# if (itemContent.subtext) { #>          <span class='nav-noti-list-subtext'><#= itemContent.subtext #></span>        <# } #>      <# if (itemContent.url) { #>        </a>      <# } else { #>        </div>      <# } #>    <# }); #>  </div><# }); #>","discoveryPanelSummary":"    <span class='nav-dp-title nav-item'>    Deliveries at a glance    <div class='nav-divider-container'><div class='nav-divider'></div></div></span>    <# jQuery.each(items || [], function (i, item) { #>        <span class='nav-item'>            <span class='nav-dp-left-column'>                <img src='<#=item.image.url#>' class='nav-dp-image' height='<#=item.image.height#>'/>            </span>            <span class='nav-dp-right-column'>                <#=item.status_text#>                <div class='nav-dp-secondary-row'>                    <a href='/your-orders/ref=nav_dp_ryo' class='nav-dp-link-emphasis'>                        Sign in to view orders                    </a>                </div>            </span>        </span>    <# }); #>","htmlList":"  <# jQuery.each(items, function (i, item) { #>    <div class='nav-item'>      <#=item #>    </div>  <# }); #>","subnav":"<# if (obj && obj.type === 'vertical') { #>  <# jQuery.each(obj.rows, function (i, row) { #>    <# if (row.flyoutElement === 'button') { #>      <div class='nav_sv_fo_v_button'        <# if (row.elementStyle) { #>          style='<#= row.elementStyle #>'        <# } #>      >        <a href='<#=row.url #>' class='nav-action-button nav-sprite'>          <#=row.text #>        </a>      </div>    <# } else if (row.flyoutElement === 'list' && row.list) { #>      <# jQuery.each(row.list, function (j, list) { #>        <div class='nav_sv_fo_v_column <#=(j === 0) ? 'nav_sv_fo_v_first' : '' #>'>          <ul class='<#=list.elementClass #>'>          <# jQuery.each(list.linkList, function (k, link) { #>            <# if (k === 0) { link.elementClass += ' nav_sv_fo_v_first'; } #>            <li class='<#=link.elementClass #>'>              <# if (link.url) { #>                <a href='<#=link.url #>' class='nav_a'><#=link.text #></a>              <# } else { #>                <span class='nav_sv_fo_v_span'><#=link.text #></span>              <# } #>            </li>          <# }); #>          </ul>        </div>      <# }); #>    <# } else if (row.flyoutElement === 'link') { #>      <# if (row.topSpacer) { #>        <div class='nav_sv_fo_v_clear'></div>      <# } #>      <div class='<#=row.elementClass #>'>        <a href='<#=row.url #>' class='nav_sv_fo_v_lmargin nav_a'>          <#=row.text #>        </a>      </div>    <# } #>  <# }); #><# } else if (obj) { #>  <div class='nav_sv_fo_scheduled'>    <#= obj #>  </div><# } #>","wishlist":"<# jQuery.each(wishlist, function (i, item) { #>  <li class='nav_pop_li'>    <a href='<#=item.url #>' class='nav_a'>      <#=item.name #>    </a>    <div class='nav_tag'>      <!-- TODO this logic should now be in dynamic-wish-list.mi -->      <# if(typeof item.count !='undefined') { #>        <#=          (item.count == 1 ? '{count} item' : '{count} items')            .replace('{count}', item.count)        #>      <# } #>    </div>  </li><# }); #>","cart":"<# jQuery.each(items, function (i, item) { #>  <div class='nav-cart-item'>    <a href='<#=item.url #>' class='nav-cart-item-link'>      <img src='<#=item.img #>' class='nav-cart-item-image' />      <span class='nav-cart-item-title'><#=item.name #></span>      <# if (item.weight) { #>        <span class='nav-cart-item-weight' style='display:none;'>          <#= 'Ship weight: {value} {unit}'.replace('{value}', item.weight.value).replace('{unit}', item.weight.unit) #>        </span>      <# } #>      <# if (item.ourPrice) { #>        <span class='nav-cart-item-buyingPrice'><#=item.ourPrice #></span>      <# } #>      <# if (item.scarcityMessage) { #>        <span class='<#=item.scarcityClass #>'><#=item.scarcityMessage #></span>      <# } #>      <span class='nav-cart-item-quantity'>        <#= 'Quantity: {count}'.replace('{count}', item.qty) #>      </span>    </a>  </div>  <# if (i%2==1) { #>    <div class='nav-cart-item-break'></div>  <# } #><# }); #><div class='nav-cart-item-break'></div>"}}); });
+</script>
+<script type="text/javascript">
+      window.$Nav && $Nav.declare('config.prefetchUrls', ["https://images-na.ssl-images-amazon.com/images/G/01/authportal/common/images/amazon_logo_no-org_mid._CB153387053_.png","https://images-na.ssl-images-amazon.com/images/G/01/authportal/common/images/amznbtn-sprite03._CB395592492_.png","https://images-na.ssl-images-amazon.com/images/G/01/authportal/flex/reduced-nav/ap-flex-reduced-nav-2.0._CB309092102_.js","https://images-na.ssl-images-amazon.com/images/G/01/authportal/flex/reduced-nav/ap-flex-reduced-nav-2.1._CB343920894_.css","https://images-na.ssl-images-amazon.com/images/G/01/gno/images/general/navAmazonLogoFooter._CB169459313_.gif","https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/nav-sprite-global_bluebeacon-V3-1x_optimized._CB483188077_.png","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/buttons/sign-in-secure._CB192194766_.gif","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/login/fwcim._CB481999694_.js","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/transparent-pixel._CB386942464_.gif","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/communities/social/snwicons_v2._CB369764580_.png","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/help/images/spotlight/kindle-family-02b._CB354814520_.jpg","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/orders/images/acorn._CB192250692_.gif","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/orders/images/amazon-gc-100._CB192250695_.gif","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/orders/images/amazon-gcs-100._CB192250695_.gif","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/orders/images/btn-close._CB192250694_.gif","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/projects/text-trace/texttrace_typ._CB353754787_.js","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/ya/images/new-link._CB192250664_.gif","https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/ya/images/shipment_large_lt._CB192250661_.gif"]);
+window.$Nav && $Nav.declare('config.prefetch',function() {
+    var pUrls = window.$Nav.getNow('config.prefetchUrls');
+    (window.AmazonUIPageJS ? AmazonUIPageJS : P).when('A').execute(function (A) { A.preload(pUrls); });
+});
+
+  /*  */
+  
+(window.AmazonUIPageJS ? AmazonUIPageJS : P).when('A').execute(function(A){
+  if(A.preload){
+    A.preload('https://images-na.ssl-images-amazon.com/images/I/71b9ZKAI1-L._RC|61ybdwam-8L.js,41MSv8-3arL.js,01PngnMp3uL.js,01wBjiz9OvL.js,21YI5xZWAwL.js,31SYqzmbU3L.js,51+klsvwgqL.js,31BAecY87JL.js_.js?AUIClients/NavDesktopMetaAsset#desktop');
+    A.preload('https://images-na.ssl-images-amazon.com/images/I/71TA9kCIyML._RC|11qlbytjBCL.css,31bOonmFB4L.css,21Wyw4UJQLL.css,31Jg45b6O1L.css,11S8GiSgx9L.css,31OvHRW+XiL.css,01XHMOHpK1L.css_.css?AUIClients/NavDesktopMetaAsset#desktop');
+  }
+});
+
+
+
+
+    window.$Nav && $Nav.declare('config.flyoutURL', null);
+    window.$Nav && $Nav.declare('btf.lite');
+    window.$Nav && $Nav.declare('btf.full');
+    window.$Nav && $Nav.declare('btf.exists');
+    (window.AmazonUIPageJS ? AmazonUIPageJS : P).register('navCF');
+  </script>
+<script type="text/javascript">
+  window.$Nav && window.$Nav.build('PldnLocalStorage', function() {
+    var PldnLocalStorage = function() {};
+
+    PldnLocalStorage.prototype.setItem = function(key, obj) {
+      if (typeof obj !== 'string') {
+        obj = window.JSON && window.JSON.stringify(obj);
+      }
+
+      try {
+        window.localStorage && window.localStorage.setItem(key, obj);
+        return true;
+      } catch (exception) {
+        return false;
+      };
+    };
+
+    PldnLocalStorage.prototype.getItem = function(key) {
+      try {
+        return window.localStorage && window.localStorage.getItem(key);
+      } catch(exception) {};
+    };
+
+    return new PldnLocalStorage();
+  });
+
+  window.$Nav && window.$Nav.when('PldnLocalStorage').run('PldnUcolCheck', function(storage) {
+    if (!storage.getItem('amazonSmileCampaigns')) {
+      storage.setItem('amazonSmileCampaigns', {
+        "ucol": {
+          "optOut": false,
+          "hits": [
+            {
+              "date": new Date(),
+              "redirect": false,
+              "optOut": false
+            }
+          ]
+        }
+      });
+    }
+  });
+</script>
+<script type="text/javascript">
+P.when('jQuery', 'ready').execute(function(jQuery) {
+    jQuery('a.expander').bind(
+        'click',
+        function(event) {
+            event.preventDefault();
+            jQuery(this).parent().next().children().toggleClass('cs-none');
+            jQuery(this).toggleClass('close');
+        }
+    );
+});
+
+P.when('jQuery', 'a-popover', 'ready').execute(function(jQuery, popover) {
+    jQuery('.cs-help-pop-link').each(function() {
+        var localContent = jQuery(this).attr('name') + '-content';
+        if (localContent) {
+            jQuery(this).addClass('cs-link-hover');
+            popover.create(jQuery(this), {
+                closeButton: false,
+                position: 'triggerVerticalAlignLeft',
+                content: jQuery('#' + localContent).html()
+            });
+        }
+    });
+});
+</script>
+<script type="text/javascript">
+    P.when('jQuery', 'cs-retail-help-autocomplete').execute( function(jQuery, helpCSTools) {
+        var searchBoxId = 'helpsearch';
+        var hiddenInputId = 'searchAutocomplete';
+        var submitButtonId = 'helpSearchSubmit';
+        jQuery( 'form[name="search-help"]' ).each( function( index ){
+            var searchFormJQ = jQuery( this );
+            var suggestionsFieldName = index + '-suggestions';
+            helpCSTools[ suggestionsFieldName ] = new helpCSTools.searchSuggest( searchFormJQ, searchBoxId, hiddenInputId, submitButtonId );
+            helpCSTools[ suggestionsFieldName ].init();
+        });
+    });
+</script>
+<script>
+  (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/21qDdiUyQlL.js?AUIClients/CSHelpSearchAutocompleteJS');
+</script>
+<div class="playlist-initial-video hidden" data-autoplay="" data-initial-video-id=""> </div>
+<script>
+  (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/31wsThiK9%2BL.js?AUIClients/CSHelpVideoPlayerJS');
+</script>
+
+
