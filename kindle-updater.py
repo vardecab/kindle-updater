@@ -38,7 +38,7 @@ output_file_name = 'page_scraped.txt'
 with open(output_file_name) as output_file:  
     read_file = output_file.read() 
     
-current_version = re.search('Software Update( [0-9,.]+)', read_file) 
+current_version = re.search('(?<=v2_)(.*)(?=.bin)', read_file)
 
 current_version = current_version.group(1) 
 
