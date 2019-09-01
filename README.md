@@ -1,4 +1,6 @@
-Script in Python to check if new software version is available for Kindle Paperwhite 4 (or any other model after you change `page_url` in code).
+## Kindle Updater
+
+Script in Python to check if new software version is available for Kindle Paperwhite 4 (or any other model after you change `page_url` in code). Just a simple proof of concept project.
 
 A bit of context why I made it: Kindle doesn't offer an option to check for updates straight from the device so either: 
 1. Amazon releases new version and Kindle will automatically download it when connected to network,
