@@ -1,6 +1,10 @@
 # Kindle Updater for Kindle Paperwhite 4 (10th gen)
-# v0.8
+# v0.9
  
+# get What's new
+import requests
+import lxml
+
 from urllib.request import urlopen # open URLs
 from bs4 import BeautifulSoup # BS
 import re # regex
@@ -64,18 +68,27 @@ elif LooseVersion(my_version) == LooseVersion(current_version):
     print (colored("Newest version installed. No updates available.", 'green'))
     if platform == "win32":
         toaster.show_toast("Kindle Updater", "Your version is up to date.", icon_path="images/icon_ok.ico")
-else:
+else: # update available
     write_new_version = open("data/software_version.txt", "w")
     write_new_version.write(str(current_version))
     print (colored("Update available: " + current_version, 'red'))
     if platform == "win32":
         toaster.show_toast("Kindle Updater", "Update available: " + current_version, icon_path="images/icon_info.ico")
+
+    r = requests.get(page_url)
+    soup = BeautifulSoup(r.content, 'lxml')
+    text = [i.text.strip() for i in soup.select('p:has(strong:contains("Here’s what’s new:")), p:has(strong:contains("Here’s what’s new:")) + p + ul li')]
+    print(colored('\n'.join(text), 'yellow'))
+    text_list = ('\n'.join(text))
+    with open("data/whats_new.txt", "w") as file:
+        file.write(text_list) 
+
     question_download = input("Download now?\ny/n: ")
     if question_download == "y":
         print (colored("Downloading update: " + current_version, 'yellow'))
         if platform == "win32":
             toaster.show_toast("Kindle Updater", "Downloading update: " + current_version, icon_path="images/icon_download.ico")
-        print ("my version: ", my_version)
+        # print ("my version: ", my_version)
         webbrowser.open(update_file_url)
     
 input ("Press Enter to continue...")
