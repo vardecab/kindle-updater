@@ -1,0 +1,3 @@
+Here’s what’s new:
+Read Now: In the coming weeks, you will be able to read items that you own with a single click from the ‘Before You Go’ dialog.
+Performance improvements, bug fixes, and other general enhancements.
