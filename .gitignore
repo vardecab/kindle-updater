@@ -11,6 +11,7 @@ _old
 kindle-updater_m.py
 branch-whats_new
 build.bat
+.ds_store
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
