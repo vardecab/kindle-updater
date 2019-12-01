@@ -1,5 +1,5 @@
 # Kindle Updater for Kindle Paperwhite 4 (10th gen)
-# v0.11
+# v0.11 Windows
  
 import requests # get "What's new"
 import lxml # process HTML; get "What's new"
