@@ -12,6 +12,7 @@ kindle-updater_m.py
 branch-whats_new
 build.bat
 .ds_store
+kindleupdater-windowstaskscheduler.xml
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
