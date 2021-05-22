@@ -8,7 +8,7 @@
 
 To look for updates for other Kindle models change 2 variables: 
 1) update URL in `update_file_url`
-2) selector in `getLatestVersion`
+2) change selector in `getLatestVersion`
 
 ## Context
 
