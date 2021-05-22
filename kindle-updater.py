@@ -1,86 +1,152 @@
-# Kindle Updater for Kindle Paperwhite 4 (10th gen)
-# v0.11 Windows
- 
-import requests # get "What's new"
-import lxml # process HTML; get "What's new"
+# ==================================== #
+#            Kindle Updater            #
+#          Kindle Paperwhite 4         #
+#               10th gen               #
+#                 v1.0                 #
+# ==================================== #
+
+# ------------ import libs ----------- #
 
 from urllib.request import urlopen # open URLs
 from bs4 import BeautifulSoup # BeautifulSoup; parsing HTML
 import re # regex; extract substrings
 from distutils.version import LooseVersion, StrictVersion # versioning; compare versions
 import webbrowser # open browser and download file 
-
-from colorama import init # colored input/output in terminal
-from termcolor import colored # colored input/output in terminal
-
-from win10toast import ToastNotifier # Windows 10 notifications
-
 import sys # sys.exit()
-from sys import platform # check platform (Windows/Linux/macOS)
+from sys import platform # check platform (Windows/macOS)
+if platform == 'win32': # Windows
+    from colorama import init # colored input/output in terminal
+    from win10toast_click import ToastNotifier # Windows 10 notifications
+    toaster = ToastNotifier() # initialize win10toast
+elif platform == 'darwin': # macOS
+    from termcolor import colored # colored input/output in termina
+    import pync # macOS notifications 
+import time # calculate script's run time
+from inputimeout import inputimeout, TimeoutOccurred # input timeout: https://pypi.org/project/inputimeout/
 
-toaster = ToastNotifier() # initialize win10toast
+# --------- fix opening page --------- #
 
-model_page_url = 'https://www.amazon.com/gp/help/customer/display.html?nodeId=GKMQC26VQQMM8XSW' # "Kindle Paperwhite (10th Generation) Software Updates" page
+import ssl # certificate issue fix: https://stackoverflow.com/questions/52805115/certificate-verify-failed-unable-to-get-local-issuer-certificate
+import certifi # certificate issue fix: https://stackoverflow.com/questions/52805115/certificate-verify-failed-unable-to-get-local-issuer-certificate
+from urllib.request import urlopen, Request # open URLs; Request to fix blocked user-agent: https://stackoverflow.com/questions/16627227/
+
+# --------- start + run time --------- #
+
+start_time = time.time() # run time start
+print("Starting...")
+
+# ------------- oepn URL ------------- #
+
+page_url = 'https://www.amazon.com/gp/help/customer/display.html?nodeId=G54HPVAW86CHYHKS' # "Kindle E-Reader Software Updates" page
 
 # try to open the URL, if fails then close the program
 try: 
-    page = urlopen(model_page_url)
+    print('Opening URL...')
+
+    # *NOTE: fix for 503 error
+    request = Request(page_url, headers={'User-Agent': 'XYZ/3.0'}) 
+    page = urlopen(request, timeout=5, context=ssl.create_default_context(cafile=certifi.where()))
 except: 
     sys.exit("No internet connection. Program exiting...")
 
-software_version_local_file = r"data\software_version.txt" # local file to store software version
-with open(software_version_local_file) as software_version_local_file: # open file...
-    read_software_version_local_file = software_version_local_file.read() # ... and read it
+# --------- get software version --------- #
 
-question_diff_version = input("Version different than " + read_software_version_local_file + "?\ny/n: ") # check if user has different version
-if question_diff_version == "y":
-    my_version = input("Type your version: ")
-    with open("data\software_version.txt", "w") as file: # open file...
-        file.write(str(my_version)) # ... and write software version
-else:
-    my_version = read_software_version_local_file # if "n" then what's in the file = existing software version
+# if stored locally
+software_version_local_file = "data/software_version.txt" # local file to store software version
+print('Reading local file to get software version...')
 
-soup = str(BeautifulSoup(page, 'html.parser')) # parse the page
-    
-latest_version = re.search('(?<=paperwhite_v2_)(.*)(?=.bin)', soup) # regex; find latest software version for Paperwhite on the page
+try: 
+    with open(software_version_local_file) as software_version_local_file: # open local file...
+        read_software_version_local_file = software_version_local_file.read() # ... and read it
+except FileNotFoundError:
+    print("File not found. Looks like it's a first launch of this script. Using default version '5.0'.") 
+    read_software_version_local_file = '5.0'
+    with open(software_version_local_file, "w", encoding="utf-8") as saveVersion:
+        print('Saving file...')
+        saveVersion.write(read_software_version_local_file) # save file locally
 
-latest_version = latest_version.group(1) # regex; returns the substring that was matched by the `re`
+# get software version from user
+timeout_time = 5 # seconds to wait 
+print(f'Script will wait {timeout_time} seconds for the input and then will continue with a default value.')
 
-latest_version = latest_version.strip() # returns a copy of the string with both leading and trailing characters removed
+try:
+    question_diff_version = inputimeout(prompt="Version different than " + read_software_version_local_file + "?\ny/n: ", timeout=timeout_time) # check if user has different version
+    try:
+        if question_diff_version == "y":
+            my_version = inputimeout(prompt="Type your version: ", timeout=timeout_time)
+            with open("data/software_version.txt", "w") as file: # open file...
+                file.write(str(my_version)) # ... and write software version
+        else:
+            my_version = read_software_version_local_file # if "n" then what's in the file = existing software version
+    except TimeoutOccurred:
+        my_version = read_software_version_local_file
+        print(f"Time ran out. Selecting default value from file: {my_version}")
+except TimeoutOccurred:
+    print("Time ran out. Selecting current version.")
+    my_version = read_software_version_local_file 
 
-update_file_url = re.search('(https:\/\/s3\.amazonaws\.com\/(.*)paperwhite(.*).bin)', soup) # find `.bin` update file for Paperwhite on the page
+# ---------- scrape website ---------- #
 
-update_file_url = update_file_url.group(1) # regex; returns the substring that was matched by the `re`
+soup = BeautifulSoup(page, 'html.parser') # parse the page
 
-# compare versions:
+# *NOTE: change if you want a different model
+getLatestVersion = soup.select("#GUID-3AB7E598-9A05-4A0D-AE78-3F59D0AB2EC1__UL_89F7B70E4B2B485BBFD579A988121FE1 > li:nth-child(1) > span > span") # find Paperwhite on the list
+getLatestVersion = str(getLatestVersion) # convert to string
+getLatestVersion = re.search("(?<=>)(.*)(?=<)", getLatestVersion) # extract software version from <span> tag 
+getLatestVersion = getLatestVersion.group() # returns the part of the string where there was a match
+getLatestVersion = getLatestVersion.strip() # remove space " " from the beginning of the string 
+
+# ------------ update URL ------------ #
+
+# *NOTE: change if you want a different model
+update_file_url = 'https://www.amazon.com/update_Kindle_Paperwhite_10th_Gen'
+
+# --------- compare versions --------- #
+
+latest_version = getLatestVersion
+
 if LooseVersion(my_version) > LooseVersion(latest_version):
-    print (colored("Newer version installed. No updates available.", 'green')) # green output
+    print (colored("Newer version is installed. No updates available.", 'green')) # green output
     if platform == "win32":
         toaster.show_toast("Kindle Updater", "Your version is up to date.", icon_path="icons/icon_ok.ico")
+    elif platform == 'darwin':
+        pync.notify(f'Your version is up to date.', title='Kindle Updater', contentImage="https://image.flaticon.com/icons/png/512/3699/3699516.png", sound="Funk") # appIcon="" doesn't work, using contentImage instead)
 elif LooseVersion(my_version) == LooseVersion(latest_version):
-    print (colored("Newest version installed. No updates available.", 'green')) # green output
+    print (colored("The newest version is installed. No updates available.", 'green')) # green output
     if platform == "win32":
         toaster.show_toast("Kindle Updater", "Your version is up to date.", icon_path="icons/icon_ok.ico")
+    elif platform == 'darwin':
+        pync.notify(f'Your version is up to date.', title='Kindle Updater', contentImage="https://image.flaticon.com/icons/png/512/3699/3699516.png", sound="Funk") # appIcon="" doesn't work, using contentImage instead)
 else: # update available
-    write_new_version_to_local_file = open("data\software_version.txt", "w") # open file...
+    write_new_version_to_local_file = open("data/software_version.txt", "w") # open file...
     write_new_version_to_local_file.write(latest_version) # ... and write latest version there so file is up-to-date for checks in future
     print (colored("Update available: " + latest_version, 'red')) # red output
     if platform == "win32":
         toaster.show_toast("Kindle Updater", "Update available: " + latest_version, icon_path="icons/icon_info.ico")
+    elif platform == 'darwin':
+        pync.notify(f'Update available: {latest_version}', title='Kindle Updater', contentImage="https://image.flaticon.com/icons/png/512/594/594801.png", sound="Funk") # appIcon="" doesn't work, using contentImage instead)
 
-    # # "What's new" logic:
-    # NOTE: disabled because Amazon decided to remove that section
-    # r = requests.get(model_page_url) # get the page...
-    # soup = BeautifulSoup(r.content, 'lxml') # ... and parse it
-    # text = [i.text.strip() for i in soup.select('p:has(strong:contains("Here’s what’s new:")), p:has(strong:contains("Here’s what’s new:")) + p + ul li')] # find every "What's new" element on the page and have it in a list
-    # print(colored('\n'.join(text), 'yellow')) # nice & clean line by line (yellow) output instead of a list 
-
-    # download update:
-    question_download_update = input("Download now?\ny/n: ")
-    if question_download_update == "y":
-        print (colored("Downloading update: " + latest_version, 'yellow')) # yellow output
-        if platform == "win32":
-            toaster.show_toast("Kindle Updater", "Downloading update: " + latest_version, icon_path="icons/icon_download.ico")
-        webbrowser.open(update_file_url) # open `.bin` URL in browser and download the update
+    # ---------- download update --------- #
     
-input ("Press Enter to continue...") # wait for input = window won't close
+    timeout_time = 30
+    try:
+        question_download_update = inputimeout(prompt="Download now?\ny/n: ", timeout=timeout_time)
+        if question_download_update == "y":
+            print (colored("Downloading update: " + latest_version, 'yellow')) # yellow output
+            if platform == "win32":
+                toaster.show_toast("Kindle Updater", "Downloading update: " + latest_version, icon_path="icons/icon_download.ico")
+            elif platform == 'darwin':
+                pync.notify(f'Downloading update: {latest_version}', title='Kindle Updater', contentImage="https://image.flaticon.com/icons/png/512/4403/4403171.png", sound="Funk") # appIcon="" doesn't work, using contentImage instead)
+            webbrowser.open(update_file_url) # open `.bin` URL in browser and download the update
+        else:
+            print('Ok, not downloading.')
+    except TimeoutOccurred:
+        print("Time ran out. Not downloading.")
+    
+input ("Press Enter to close the script >>>") # wait for input = window won't close
+
+# ------------- run time ------------- #
+
+end_time = time.time() # run time end 
+run_time = round(end_time-start_time,2)
+print("Script run time:", run_time, "seconds. That's", round(run_time/60,2), "minutes.")
