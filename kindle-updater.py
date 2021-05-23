@@ -35,7 +35,7 @@ from urllib.request import urlopen, Request # open URLs; Request to fix blocked 
 start_time = time.time() # run time start
 print("Starting...")
 
-# ------------- oepn URL ------------- #
+# ------------- open URL ------------- #
 
 page_url = 'https://www.amazon.com/gp/help/customer/display.html?nodeId=G54HPVAW86CHYHKS' # "Kindle E-Reader Software Updates" page
 
