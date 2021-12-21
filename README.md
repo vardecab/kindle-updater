@@ -13,8 +13,8 @@ To look for updates for other Kindle models change 2 variables:
 ## Context
 
 A bit of context why I made it: Kindle doesn't offer an option to check for updates straight from the device so either: 
-1. Amazon releases new version and Kindle will automatically download it when connected to network,
-2. ^ sometimes it doesn't work, so you may want to download _.bin_ file manually from the website, copy to device and then install it.
+1. Amazon releases new version and Kindle will automatically download it when connected to network after ~ 2 months from initial release,
+2. ^ sometimes it doesn't work or you don't want to wait, so you may want to download _.bin_ file manually from the website, copy to your device and then install it.
 
 Option 2) means every now and then you have to check [Amazon's website](https://www.amazon.com/gp/help/customer/display.html?nodeId=GKMQC26VQQMM8XSW). That gave me an idea to write a script which will automate that. 
 
@@ -22,6 +22,7 @@ Program crawls and scrapes the website, extracts current software version using 
 
 ## Release History
 
+- 1.1.0: Fixed selector so it now works; tweaked a few minor things; added a possibility to open the URL of newest version file from notification.
 - 1.0: Re-wrote the script so it works with the updated Amazon website; supports both macOS and Windows; supports notifications on both platforms; added input timeout.
 
 ## Versioning

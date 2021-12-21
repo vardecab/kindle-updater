@@ -2,7 +2,7 @@
 #            Kindle Updater            #
 #          Kindle Paperwhite 4         #
 #               10th gen               #
-#                 v1.0                 #
+#                v1.1.0                #
 # ==================================== #
 
 # ------------ import libs ----------- #
@@ -10,7 +10,7 @@
 from urllib.request import urlopen # open URLs
 from bs4 import BeautifulSoup # BeautifulSoup; parsing HTML
 import re # regex; extract substrings
-from distutils.version import LooseVersion, StrictVersion # versioning; compare versions
+from distutils.version import LooseVersion, StrictVersion # versioning; compare versions // TODO: it's going to be removed in Python 3.12 → find alternative 
 import webbrowser # open browser and download file 
 import sys # sys.exit()
 from sys import platform # check platform (Windows/macOS)
@@ -19,7 +19,7 @@ if platform == 'win32': # Windows
     from win10toast_click import ToastNotifier # Windows 10 notifications
     toaster = ToastNotifier() # initialize win10toast
 elif platform == 'darwin': # macOS
-    from termcolor import colored # colored input/output in termina
+    from termcolor import colored # colored input/output in terminal
     import pync # macOS notifications 
 import time # calculate script's run time
 from inputimeout import inputimeout, TimeoutOccurred # input timeout: https://pypi.org/project/inputimeout/
@@ -44,7 +44,7 @@ try:
     print('Opening URL...')
 
     # *NOTE: fix for 503 error
-    request = Request(page_url, headers={'User-Agent': 'XYZ/3.0'}) 
+    request = Request(page_url, headers={'User-Agent': 'XYZ/3.0'}) # using different agent to not get blocked
     page = urlopen(request, timeout=5, context=ssl.create_default_context(cafile=certifi.where()))
 except: 
     sys.exit("No internet connection. Program exiting...")
@@ -82,7 +82,7 @@ try:
         my_version = read_software_version_local_file
         print(f"Time ran out. Selecting default value from file: {my_version}")
 except TimeoutOccurred:
-    print("Time ran out. Selecting current version.")
+    print(f"Time ran out. Selecting current version, {read_software_version_local_file}.")
     my_version = read_software_version_local_file 
 
 # ---------- scrape website ---------- #
@@ -90,16 +90,26 @@ except TimeoutOccurred:
 soup = BeautifulSoup(page, 'html.parser') # parse the page
 
 # *NOTE: change if you want a different model
-getLatestVersion = soup.select("#GUID-3AB7E598-9A05-4A0D-AE78-3F59D0AB2EC1__UL_89F7B70E4B2B485BBFD579A988121FE1 > li:nth-child(1) > span > span") # find Paperwhite on the list
+getLatestVersion = soup.select("#GUID-E5C7ABBF-B934-4B95-9B7A-872D0A77CD4B__GUID-79E9B5FE-EFF4-4D5F-91FD-358D14A04FC7") # find Paperwhite on the list
 getLatestVersion = str(getLatestVersion) # convert to string
 getLatestVersion = re.search("(?<=>)(.*)(?=<)", getLatestVersion) # extract software version from <span> tag 
 getLatestVersion = getLatestVersion.group() # returns the part of the string where there was a match
 getLatestVersion = getLatestVersion.strip() # remove space " " from the beginning of the string 
 
-# ------------ update URL ------------ #
+# ---------- open update URL --------- #
 
 # *NOTE: change if you want a different model
+
+# for macOS
 update_file_url = 'https://www.amazon.com/update_Kindle_Paperwhite_10th_Gen'
+
+# for Windows
+def open_url():
+    try: 
+        webbrowser.open_new(update_file_url)
+        print('Opening URL...') # status
+    except: 
+        print('Failed to open URL. Unsupported variable type.')
 
 # --------- compare versions --------- #
 
@@ -118,13 +128,11 @@ elif LooseVersion(my_version) == LooseVersion(latest_version):
     elif platform == 'darwin':
         pync.notify(f'Your version is up to date.', title='Kindle Updater', contentImage="https://image.flaticon.com/icons/png/512/3699/3699516.png", sound="Funk") # appIcon="" doesn't work, using contentImage instead)
 else: # update available
-    write_new_version_to_local_file = open("data/software_version.txt", "w") # open file...
-    write_new_version_to_local_file.write(latest_version) # ... and write latest version there so file is up-to-date for checks in future
     print (colored("Update available: " + latest_version, 'red')) # red output
     if platform == "win32":
-        toaster.show_toast("Kindle Updater", "Update available: " + latest_version, icon_path="icons/icon_info.ico")
+        toaster.show_toast("Kindle Updater", "Update available: " + latest_version, icon_path="icons/icon_info.ico", callback_on_click=open_url)
     elif platform == 'darwin':
-        pync.notify(f'Update available: {latest_version}', title='Kindle Updater', contentImage="https://image.flaticon.com/icons/png/512/594/594801.png", sound="Funk") # appIcon="" doesn't work, using contentImage instead)
+        pync.notify(f'Update available: {latest_version}', title='Kindle Updater', contentImage="https://image.flaticon.com/icons/png/512/594/594801.png", sound="Funk", open=update_file_url) # appIcon="" doesn't work, using contentImage instead)
 
     # ---------- download update --------- #
     
@@ -138,12 +146,18 @@ else: # update available
             elif platform == 'darwin':
                 pync.notify(f'Downloading update: {latest_version}', title='Kindle Updater', contentImage="https://image.flaticon.com/icons/png/512/4403/4403171.png", sound="Funk") # appIcon="" doesn't work, using contentImage instead)
             webbrowser.open(update_file_url) # open `.bin` URL in browser and download the update
+            
+            # ---- save new version to a file ---- #
+            
+            write_new_version_to_local_file = open("data/software_version.txt", "w") # open file...
+            write_new_version_to_local_file.write(latest_version) # ... and write latest version there so file is up-to-date for checks in future
+            
         else:
             print('Ok, not downloading.')
     except TimeoutOccurred:
         print("Time ran out. Not downloading.")
     
-input ("Press Enter to close the script >>>") # wait for input = window won't close
+# input ("Press Enter to close the script >>>") # wait for input = window won't close
 
 # ------------- run time ------------- #
 
