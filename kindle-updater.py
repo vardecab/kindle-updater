@@ -84,6 +84,9 @@ try:
 except TimeoutOccurred:
     print(f"Time ran out. Selecting current version, {read_software_version_local_file}.")
     my_version = read_software_version_local_file 
+except:
+    print(f"Some issue occurred when launched via SwiftBar. Selecting current version, {read_software_version_local_file}.")
+    my_version = read_software_version_local_file 
 
 # ---------- scrape website ---------- #
 

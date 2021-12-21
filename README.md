@@ -22,6 +22,7 @@ Program crawls and scrapes the website, extracts current software version using 
 
 ## Release History
 
+- 1.1.1: Fix for a bug when launching via [SwiftBar](https://github.com/swiftbar/SwiftBar).
 - 1.1.0: Fixed selector so it now works; tweaked a few minor things; added a possibility to open the URL of newest version file from notification.
 - 1.0: Re-wrote the script so it works with the updated Amazon website; supports both macOS and Windows; supports notifications on both platforms; added input timeout.
 
