@@ -47,7 +47,7 @@ Using [SemVer](http://semver.org/).
 - Colored text in the terminal: [termcolor](https://pypi.org/project/termcolor/)
 
 ### Other
-- Icons from [Icons8](https://icons8.com/)
+- Icons from [Flaticon](https://www.flaticon.com)
 - Icons hosted on [ImgBB](https://imgbb.com)
 - .png → .ico conversion with [CloudConvert](https://cloudconvert.com/png-to-ico)
 
