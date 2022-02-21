@@ -2,7 +2,7 @@
 #            Kindle Updater            #
 #          Kindle Paperwhite 4         #
 #               10th gen               #
-#                v1.1.0                #
+#                v1.1.2                #
 # ==================================== #
 
 # ------------ import libs ----------- #
@@ -16,13 +16,14 @@ import sys # sys.exit()
 from sys import platform # check platform (Windows/macOS)
 if platform == 'win32': # Windows
     from colorama import init # colored input/output in terminal
+    init()
     from win10toast_click import ToastNotifier # Windows 10 notifications
     toaster = ToastNotifier() # initialize win10toast
 elif platform == 'darwin': # macOS
-    from termcolor import colored # colored input/output in terminal
     import pync # macOS notifications 
 import time # calculate script's run time
 from inputimeout import inputimeout, TimeoutOccurred # input timeout: https://pypi.org/project/inputimeout/
+from termcolor import colored # colored input/output in terminal
 
 # --------- fix opening page --------- #
 
@@ -118,24 +119,24 @@ def open_url():
 
 latest_version = getLatestVersion
 
-if LooseVersion(my_version) > LooseVersion(latest_version):
+if LooseVersion(my_version) > LooseVersion(latest_version): # NOTE: no updates
     print (colored("Newer version is installed. No updates available.", 'green')) # green output
     if platform == "win32":
-        toaster.show_toast("Kindle Updater", "Your version is up to date.", icon_path="icons/icon_ok.ico")
+        toaster.show_toast("Kindle Updater", "Your version is up to date.", icon_path="icons/no_updates.ico")
     elif platform == 'darwin':
-        pync.notify(f'Your version is up to date.', title='Kindle Updater', contentImage="https://image.flaticon.com/icons/png/512/3699/3699516.png", sound="Funk") # appIcon="" doesn't work, using contentImage instead)
-elif LooseVersion(my_version) == LooseVersion(latest_version):
+        pync.notify(f'Your version is up to date.', title='Kindle Updater', contentImage="https://i.ibb.co/tzkJDxY/no-updates.png", sound="Funk") # appIcon="" doesn't work, using contentImage instead)
+elif LooseVersion(my_version) == LooseVersion(latest_version): # NOTE: equal, no updates
     print (colored("The newest version is installed. No updates available.", 'green')) # green output
     if platform == "win32":
-        toaster.show_toast("Kindle Updater", "Your version is up to date.", icon_path="icons/icon_ok.ico")
+        toaster.show_toast("Kindle Updater", "Your version is up to date.", icon_path="icons/no_updates.ico")
     elif platform == 'darwin':
-        pync.notify(f'Your version is up to date.', title='Kindle Updater', contentImage="https://image.flaticon.com/icons/png/512/3699/3699516.png", sound="Funk") # appIcon="" doesn't work, using contentImage instead)
-else: # update available
+        pync.notify(f'Your version is up to date.', title='Kindle Updater', contentImage="https://i.ibb.co/tzkJDxY/no-updates.png", sound="Funk") # appIcon="" doesn't work, using contentImage instead)
+else: # NOTE: update available
     print (colored("Update available: " + latest_version, 'red')) # red output
     if platform == "win32":
-        toaster.show_toast("Kindle Updater", "Update available: " + latest_version, icon_path="icons/icon_info.ico", callback_on_click=open_url)
+        toaster.show_toast("Kindle Updater", "Update available: " + latest_version, icon_path="icons/updates.ico", callback_on_click=open_url)
     elif platform == 'darwin':
-        pync.notify(f'Update available: {latest_version}', title='Kindle Updater', contentImage="https://image.flaticon.com/icons/png/512/594/594801.png", sound="Funk", open=update_file_url) # appIcon="" doesn't work, using contentImage instead)
+        pync.notify(f'Update available: {latest_version}', title='Kindle Updater', contentImage="https://i.ibb.co/QYqJJqX/updates.png", sound="Funk", open=update_file_url) # appIcon="" doesn't work, using contentImage instead)
 
     # ---------- download update --------- #
     
@@ -145,9 +146,9 @@ else: # update available
         if question_download_update == "y":
             print (colored("Downloading update: " + latest_version, 'yellow')) # yellow output
             if platform == "win32":
-                toaster.show_toast("Kindle Updater", "Downloading update: " + latest_version, icon_path="icons/icon_download.ico")
+                toaster.show_toast("Kindle Updater", "Downloading update: " + latest_version, icon_path="icons/downloading.ico")
             elif platform == 'darwin':
-                pync.notify(f'Downloading update: {latest_version}', title='Kindle Updater', contentImage="https://image.flaticon.com/icons/png/512/4403/4403171.png", sound="Funk") # appIcon="" doesn't work, using contentImage instead)
+                pync.notify(f'Downloading update: {latest_version}', title='Kindle Updater', contentImage="https://i.ibb.co/VHjZfsB/downloading.png", sound="Funk") # appIcon="" doesn't work, using contentImage instead)
             webbrowser.open(update_file_url) # open `.bin` URL in browser and download the update
             
             # ---- save new version to a file ---- #

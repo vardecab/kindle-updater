@@ -22,6 +22,7 @@ Program crawls and scrapes the website, extracts current software version using 
 
 ## Release History
 
+- 1.1.2: Fixed icons not working (and changed them).
 - 1.1.1: Fix for a bug when launching via [SwiftBar](https://github.com/swiftbar/SwiftBar).
 - 1.1.0: Fixed selector so it now works; tweaked a few minor things; added a possibility to open the URL of newest version file from notification.
 - 1.0: Re-wrote the script so it works with the updated Amazon website; supports both macOS and Windows; supports notifications on both platforms; added input timeout.
@@ -37,13 +38,18 @@ Using [SemVer](http://semver.org/).
 
 ## Acknowledgements
 
-- [Icons8](https://icons8.com/)
-- [colorama](https://pypi.org/project/colorama/)
-- [termcolor](https://pypi.org/project/termcolor/)
-- [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#)
+### Core
+- Scraping data with [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#)
 - [inputimeout](https://pypi.org/project/inputimeout/)
-- [win10toast-click](https://github.com/vardecab/win10toast-click)
-- [pync](https://github.com/SeTeM/pync)
+- Windows notifications done with: [win10toast-click](https://github.com/vardecab/win10toast-click)
+- macOS notifications done with: [pync](https://github.com/SeTeM/pync)
+- Colored text in the terminal: [colorama](https://pypi.org/project/colorama/)
+- Colored text in the terminal: [termcolor](https://pypi.org/project/termcolor/)
+
+### Other
+- Icons from [Icons8](https://icons8.com/)
+- Icons hosted on [ImgBB](https://imgbb.com)
+- .png → .ico conversion with [CloudConvert](https://cloudconvert.com/png-to-ico)
 
 ## Contributing
 
