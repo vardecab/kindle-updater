@@ -1,5 +1,7 @@
 # Kindle Updater
 
+![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-green.svg)
+<br>
 ![](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-blue)
 
 >Script in Python to check if new software version is available for Kindle Paperwhite 4 (or any other model after you change a couple of variables). Just a simple proof of concept project.
