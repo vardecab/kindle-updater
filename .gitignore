@@ -15,3 +15,4 @@ build.bat
 .vscode
 kindleupdater-windowstaskscheduler.xml
 automate/macos/kindle-updater.12h.sh
+automate

@@ -2,7 +2,6 @@
 #            Kindle Updater            #
 #          Kindle Paperwhite 4         #
 #               10th gen               #
-#                v1.1.2                #
 # ==================================== #
 
 # ------------ import libs ----------- #
@@ -94,7 +93,7 @@ except:
 soup = BeautifulSoup(page, 'html.parser') # parse the page
 
 # *NOTE: change if you want a different model
-getLatestVersion = soup.select("#GUID-E5C7ABBF-B934-4B95-9B7A-872D0A77CD4B__GUID-79E9B5FE-EFF4-4D5F-91FD-358D14A04FC7") # find Paperwhite on the list
+getLatestVersion = soup.select("#GUID-E5C7ABBF-B934-4B95-9B7A-872D0A77CD4B__GUID-F171BE14-35DC-40A8-B8FC-959677B72B68") # find Paperwhite on the list
 getLatestVersion = str(getLatestVersion) # convert to string
 getLatestVersion = re.search("(?<=>)(.*)(?=<)", getLatestVersion) # extract software version from <span> tag 
 getLatestVersion = getLatestVersion.group() # returns the part of the string where there was a match
@@ -124,19 +123,19 @@ if LooseVersion(my_version) > LooseVersion(latest_version): # NOTE: no updates
     if platform == "win32":
         toaster.show_toast("Kindle Updater", "Your version is up to date.", icon_path="icons/no_updates.ico")
     elif platform == 'darwin':
-        pync.notify(f'Your version is up to date.', title='Kindle Updater', contentImage="https://i.ibb.co/tzkJDxY/no-updates.png", sound="Funk") # appIcon="" doesn't work, using contentImage instead)
+        pync.notify(f'Your version is up to date.', title='Kindle Updater', contentImage="https://i.ibb.co/tzkJDxY/no-updates.png", sound="") # appIcon="" doesn't work, using contentImage instead)
 elif LooseVersion(my_version) == LooseVersion(latest_version): # NOTE: equal, no updates
     print (colored("The newest version is installed. No updates available.", 'green')) # green output
     if platform == "win32":
         toaster.show_toast("Kindle Updater", "Your version is up to date.", icon_path="icons/no_updates.ico")
     elif platform == 'darwin':
-        pync.notify(f'Your version is up to date.', title='Kindle Updater', contentImage="https://i.ibb.co/tzkJDxY/no-updates.png", sound="Funk") # appIcon="" doesn't work, using contentImage instead)
+        pync.notify(f'Your version is up to date.', title='Kindle Updater', contentImage="https://i.ibb.co/tzkJDxY/no-updates.png", sound="") # appIcon="" doesn't work, using contentImage instead)
 else: # NOTE: update available
     print (colored("Update available: " + latest_version, 'red')) # red output
     if platform == "win32":
         toaster.show_toast("Kindle Updater", "Update available: " + latest_version, icon_path="icons/updates.ico", callback_on_click=open_url)
     elif platform == 'darwin':
-        pync.notify(f'Update available: {latest_version}', title='Kindle Updater', contentImage="https://i.ibb.co/QYqJJqX/updates.png", sound="Funk", open=update_file_url) # appIcon="" doesn't work, using contentImage instead)
+        pync.notify(f'Update available: {latest_version}', title='Kindle Updater', contentImage="https://i.ibb.co/QYqJJqX/updates.png", sound="", open=update_file_url) # appIcon="" doesn't work, using contentImage instead) # NOTE: can't execute a function on notification click :/ 
 
     # ---------- download update --------- #
     
@@ -148,7 +147,7 @@ else: # NOTE: update available
             if platform == "win32":
                 toaster.show_toast("Kindle Updater", "Downloading update: " + latest_version, icon_path="icons/downloading.ico")
             elif platform == 'darwin':
-                pync.notify(f'Downloading update: {latest_version}', title='Kindle Updater', contentImage="https://i.ibb.co/VHjZfsB/downloading.png", sound="Funk") # appIcon="" doesn't work, using contentImage instead)
+                pync.notify(f'Downloading update: {latest_version}', title='Kindle Updater', contentImage="https://i.ibb.co/VHjZfsB/downloading.png", sound="") # appIcon="" doesn't work, using contentImage instead)
             webbrowser.open(update_file_url) # open `.bin` URL in browser and download the update
             
             # ---- save new version to a file ---- #
