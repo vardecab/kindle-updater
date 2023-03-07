@@ -45,7 +45,7 @@ Using [SemVer](http://semver.org/).
 ### Core
 - Scraping data with [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#)
 - [inputimeout](https://pypi.org/project/inputimeout/)
-- Windows notifications done with: [win10toast-click](https://github.com/vardecab/win10toast-click)
+- Windows notifications done with: [plyer](https://pypi.org/project/plyer/)
 - macOS notifications done with: [pync](https://github.com/SeTeM/pync)
 - Colored text in the terminal: [colorama](https://pypi.org/project/colorama/)
 - Colored text in the terminal: [termcolor](https://pypi.org/project/termcolor/)
