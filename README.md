@@ -24,6 +24,7 @@ Program crawls and scrapes the website, extracts current software version using 
 
 ## Release History
 
+- 1.2.1: New library used for displaying Windows notifications.
 - 1.2: Fixed selector; removed sound from macOS notifications.
 - 1.1.2: Fixed icons not working (and changed them).
 - 1.1.1: Fix for a bug when launching via [SwiftBar](https://github.com/swiftbar/SwiftBar).
